@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <linl rel="stylesheet" href="styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!--font-->
+    
+ 
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+    
+
+
+
+    <style>
+
+        body,html{overflow-y: hidden;}
+        @media only screen and (max-width: 600px) {
+            .mains {
+    position: relative!important;
+    top: -64px!important;
+    width: 140px !important;
+    left: 131px !important;}
+}
+        </style>
+ 
+</head>
+<body>
+    <body class="bg">
+	
+        <div class="container my">
+       <div class="row">
+           <div class="col-md-6 wdth">
+       <img src="images/dhamaal_poker.png"  width="200" class="mypic">
+       <h2 class="ludo">Welcome To  <br><span class="rum">Poker Dhamaal</span></h2>
+       
+       <h4 id="notshows" style="margin-top: -12px;
+    margin-bottom: 25px;">Already have an account?</h4>
+
+       <a href="" id="filedownload2"><button class="buy-btn mx" style="width:224px;margin-top:-40px;">Download and Play</button></a>
+       
+       
+       
+       
+           </div>
+       
+       
+           <div class="col-md-6 second-side">
+               <div id="form-cont">
+               <h2>SIGNUP & START WINNING</h2>
+           <form>
+               <div class="form-row my-row">
+                 <div class="form-group col-md-6">
+                   <label for="username"></label>
+                   <input type="text" class="form-control" id="username" placeholder="Username or Email" maxlength="20" >
+                   <input type="hidden" name="user_id" id="user_id" >
+                   <div class="validationText4" style="color: red;font-size: 12px;padding-top: 14px;
+                   position: absolute;"></div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label for="password"></label>
+                   <input type="password" class="form-control" id="password" placeholder="Password" maxlength="20" >
+                   <div class="validationTextp" style="color: red;font-size: 12px;padding-top: 14px;
+                   position: absolute;"></div>
+                 </div>
+               </div>
+       
+               <div class="form-row my-row">
+                   <div class="form-group col-md-6 ">
+                     <label for="phnnumber"></label>
+                     <input type="text" class="form-control" id="phnnumber" placeholder="Phone No" maxlength="10" onkeypress="return NumberOnly(event)" onrequired=""  >
+                     <div class="validationText2" style="color: red;font-size: 12px;padding-top: 14px;
+                     position: absolute;"></div>
+                    </div>
+                   <div class="col-md-6 emailfileds" style="margin-top: 2px;">
+                   <button id="mobileotp" data-type="mobile_data" name="mobile_otp"  class="box log-twitter mobilefileds ">Send OTP <i class="fa fa-refresh"></i></button>
+                   </div>
+                 </div>
+       
+       
+       
+               <div class="form-row">
+                 <div class="form-group col-md-12">
+                   <label for="inputCity"></label>
+                   <input type="text" class="form-control log-twitter mobilefileds " maxlength="6"  id="mobileotpbox" data-type="mobile_data" placeholder="Enter OTP" onblur="validatePhoneFields( this )" style="width:39% !important;">
+                 </div>
+               
+                
+               </div>
+               <div class="col-lg-6 emailfileds hidden">
+                <div class="form-group">
+                    <input type="email" class="form-control hidden" id="email" placeholder="Your Email ID" name="emailid" >
+                    <div class="validationText5" style="color: red;font-size: 12px;"></div>
+                </div>
+                
+            </div>
+          
+          <div class="col-lg-2 emailfileds hidden">
+                <button class="btn btn-warning text-white btn-sm " id="emailotp" data-type="email_data" style="border-radius: 50px;">Send OTP</button>
+				<div id="result"></div>
+           </div>
+           <div class="col-lg-4 emailfileds hidden">
+                <div class="form-group">
+                    <input type="text" class="form-control otp hidden" placeholder="Enter you Email OTP" id="emailotpbox" name="emailotpbox" required="required" style="display: none; width: 200px;">
+                     <div class="mailopp" style="color: red;font-size: 12px;"></div>
+                </div>
+            </div> 
+       
+               <div class="form-row my-row">
+                   <div class="col-md-6">
+                 <div class="form-check mtop">
+                   <input class="form-check-input" type="checkbox" id="chb">
+                   <label class="form-check-label  promo"  disabled for="chb">  
+                       &nbsp;  Have a Promo Code?
+                   </label>
+                 </div>
+               </div>
+       
+                 <div class="form-group col-md-6">
+                   <label for="inputCity"></label>
+                   <input style="margin-top: -10px;" type="text" class="form-control hidden" id="checkin" placeholder="Enter your Promocode" maxlength="10"        onblur="validatePhoneField( this )">
+                   <div class="promo_code_valid" style="color: red;font-size: 12px;"></div>
+                 </div>
+               
+       
+               </div>
+       
+       
+               <div class="form-row">
+                   <div class="col-md-12">
+                       <div class="form-check mtop">
+                         <input class="form-check-input chk" type="checkbox" id="chb1" style="position: relative;top:-20px;">
+                         <label class="form-check-label" for="chb1">&nbsp;
+                       I accept to the term and conditions,privacy policy and <br>&nbsp;&nbsp;&nbsp;<span class="para">confirm that I am legally of age</span>
+                         </label>
+                         <div class="validationText3" style="color: red;font-size: 12px;"></div>
+                       </div>
+                 
+                  <div class="col-md-12 mtops">
+       
+               <button class="buy-btn mains sign_up" name="no_otp" id="sign_up">Signup</button> &nbsp; &nbsp;
+                   <button class="buy-btn mains" id="cancel" onclick="reset_f()">Cancel</button> 
+                   
+                  </div>
+                  <div class="alert-danger1 mb-0" style="margin-left: 54%;
+    margin-top: -36%;display:none;padding: 0.5rem 0.25rem!important;color: red"></div>
+                  <div class="alert-success1 mb-0" style="margin-left: 54%;
+    margin-top: -36%;display:none;padding: 0.5rem 0.25rem    !important;color: green"></div>
+                 </div>
+           
+             </form>
+       
+       
+       
+       
+           </div>
+       
+       
+       </div>
+       <div id="show-cont">
+           <div class="card" style="width: 18rem;margin-left: 190px;">
+       
+               <div class="card-body">
+                   <i class="fa fa-check-circle text-center"></i><br>
+                 <h5 class="card-title text-white text-center"style="color:#fff;">Success</h5>
+                 <p class="text" style="color:#fff;">Congratulations, your account has been successfully created . Download the app, login and enjoy the game..</p>
+                 <a id="filedownload"><button class="buy-btn" style="width:264px;margin-top:40px;">Download and Play Now</button></a>
+               </div>
+             </div>
+           
+       
+       
+       
+       </div>
+       </div>
+        </div> 
+       
+       
+       
+      </body>
+      </html>
+         
+         <!-- Modal -->
+         <script>
+          var client_id = 99;
+          var is_mobile  =  1;
+          var is_email =    1;
+          var BASE_URL = 'https://api.ludodhamaal.com/index.php/Web_service/';
+          var chk_sp =1;
+          $( document ).ready(function() {
+            
+      downloadFile();
+  });
+  
+  function downloadFile(){
+  
+        var formData = new FormData();
+        formData.append('device_type','android');
+        formData.append('client_id',client_id);
+        var api_url1=BASE_URL+"getversion";
+      $.ajax({
+          url:api_url1,
+          method:"post",
+          data: formData,
+          dataType: 'JSON',
+          processData: false,
+          contentType: false,
+  
+          success: function(data){
+              
+              var result=data;
+              if(result.status==1){
+  
+  
+  
+              // filedownload(result.app_link,'App');
+  
+               $("#filedownload").attr("href",result.app_link);
+               $("#filedownload2").attr("href",result.app_link);
+               console.log(result.app_link);
+              }
+            }
+      });
+  }
+        </script>       
+       
+       
+       
+           <script>
+       function myFunction() {
+         // Get the checkbox
+         var checkBox = document.getElementById("myCheck");
+         // Get the output text
+         var text = document.getElementById("text");
+       
+         // If the checkbox is checked, display the output text
+         if (checkBox.checked == true){
+           text.style.display = "block";
+           
+         } else {
+           text.style.display = "none";
+         }
+       }
+               </script>
+       
+       
+       <script>
+       $(".btn-default").on('click', function() {
+         $(".custom-model-main").addClass('model-open');
+       }); 
+       $(".close-btn, .bg-overlay").click(function(){
+         $(".custom-model-main").removeClass('model-open');
+       });
+       
+       
+       </script>
+       
+       
+       <script>
+        $(document).ready(function(){
+          $("#my-btn").click(function(){
+            $(".mx").hide();
+        
+          });
+    
+    
+      
+        
+        });
+        </script>
+
+
+       <script>
+           $(document).ready(function(){
+             $("#my-btn").click(function(){
+               $("#form-cont").hide();
+           
+             });
+       
+       
+         
+           
+           });
+           </script>
+       <script>
+           $(document).ready(function(){
+             $("#my-btn").click(function(){
+               $("#notshow").hide();
+           
+             });
+       
+       
+         
+           
+           });
+           </script>
+       
+       <script>
+           $(document).ready(function(){
+             $("#my-btn").click(function(){
+               $("#notshows").hide();
+               $("#show-cont").show();
+             });
+       
+       
+         
+           
+           });
+           </script>
+       <script type="text/javascript">
+        //  $(".nothid").css("display","none !important");
+        
+         $("#chb").click(function(){
+          $('#checkin').toggleClass('hidden');
+          });
+        
+        </script>
+        <script type="text/javascript">
+        
+          $(document).ready(function () {
+              $("#username").keydown(function (event) {
+                  if (event.keyCode == 32) {
+                      event.preventDefault();
+                  }
+              });
+          });
+        
+        </script>
+        <script type="text/javascript">
+      
+        
+          $(document).ready(function() {
+        reset_f();
+        var api_url=BASE_URL+"get_clientgameoption";
+        
+        jQuery.ajax({
+                type: 'POST',
+                url: api_url,
+                data: {
+                  client_id: client_id
+                }, 
+                dataType: 'json',
+                cache: false,
+                success: function(data) { 
+                  if(data.status==1){
+                    
+        
+                  $.each(data.data, function(i, item){ 
+                    var game_option = item.game_option;
+        
+                   
+                    if(game_option == "mobile_verification") {
+                    
+                       is_mobile = 0;
+                    chk_sp++;
+                   }else{
+        
+                   } 
+        
+                    if(game_option == "email_verification") {
+                      
+                      is_email = 0;
+                     chk_sp++;
+                   }
+              }); 
+                  
+        
+        
+                  if(is_email == 1){
+                      $('.emailfileds').removeClass('hidden');
+                      // $('#emailotp').removeClass('hidden');
+        
+        
+                  }
+                  if(is_mobile == 1){
+        
+                     $('.mobilefileds').removeClass('hidden');
+                      //  $('#phnnumber').removeClass('hidden');
+        
+                  }
+        
+                  if(chk_sp == 3){
+        
+                    $('#sign_up').removeAttr('id');
+                    $('#mobileotp').removeAttr('id');
+                    $('.finalsign_up').attr('id','mobileotp');
+        
+        
+                  }
+        
+                  }else{
+                   alert("error");
+                  }
+                },
+            });
+        });
+        
+        $("#phnnumber").on('keypress keyup',function(){
+          $(".error1").hide();
+          var hasError = false;
+        if($("#phnnumber").length == 0){
+            $("#phnnumber").after('<span class="error1">Please enter phone number</span>');
+            hasError = true;
+        }
+         else if ($("#phnnumber").length != 9) {
+          $("#email").after('<span class="error1">Enter a valid phone number</span>');
+            hasError = true;
+         }
+        
+        });
+        
+         function NumberOnly(event) {
+                var k = event ? event.which : window.event.keyCode;
+                if ((k < 48 || k > 57)){
+                  return false;
+                }
+              return true;
+              }
+        
+        
+          // $("#email").on('keypress keyup',function(){
+          //       var value= $(this).val();
+          //      $(".error").hide();
+          //       var hasError = false;
+          //       var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+          //       if(value == '') {
+          //           $("#email").after('<span class="error">Please enter your email address.</span>');
+          //           hasError = true;
+          //       }
+         
+          //       else if(!emailReg.test(value)) {
+          //           $("#email").after('<span class="error">Enter a valid email address.</span>');
+          //           hasError = true;
+          //       }
+                
+          //   });
+        
+        
+        
+        
+        $(document).on('click','#mobileotp,#emailotp', function(e){
+        e.preventDefault();
+        
+         var username  =  $("#username").val();
+         var user_id  =  $("#user_id").val();
+        
+         var password=$("#password").val();
+        //  console.log(password);
+         var email=$("#email").val();
+         var email='';
+        //  console.log(email);
+         var phnnumber=$("#phnnumber").val();
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         var otp_type = $(this).attr('name');
+         var clickonbtn = $(this);
+         var promo_code   =  $('#checkin').val();
+         var volid_promo = true;
+         
+         if(username=='')
+               {
+                 $('.validationText4').html("Please Enter Username");
+                 $('#username').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+              }
+              if(username.length < 6)
+               {
+                 $('.validationText4' ).html("Minimum 6 characters required");
+                  $('#username').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+              }else{
+                 $('.validationText4' ).html('');
+                 $('#username').css('border','1px solid rgb(206, 212, 218)');
+              }
+        
+            if(password=='')
+               {
+                 $('.validationText4' ).html('');
+                
+                 $('.validationTextp' ).html("Please Enter Password");
+                 $('#Password').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+              }else{
+                 $('.validationTextp' ).html('');
+                 $('#Password').css('border','1px solid rgb(206, 212, 218)');
+              }
+        
+        // if(email!=''){
+        //       if(email.match(mailformat)) {
+        //         if(email.match(/\s/g)){
+        //           $('.validationTextp' ).html('');
+        //           $('.validationText5' ).html("Please Enter Valid Email");
+        //           $('#email').css('border','1px solid rgb(206, 24, 24)');
+        //           return false;
+        //         }else{
+        //         $('.validationText5' ).html("")
+        //         $('#email').css('border','1px solid rgb(206, 212, 218)');
+        //       }
+        //       } else {
+        //         $('.validationText5' ).html("Please Enter Valid Email");
+        //         $('#email').css('border','1px solid rgb(206, 2, 24)');
+        //         return false;
+        //       }
+        //     }
+        
+              if(phnnumber!='')
+               {
+                if($('#phnnumber').val().length != 10){
+                $('.validationText5' ).html('');
+                 $('.validationText2' ).html("Please Enter Valid Mobile Number");
+                 $('#phnnumber').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+               }else {
+                $('.validationText2' ).html('');
+                $('#phnnumber').css('border','1px solid rgb(206, 212, 218)');
+              }
+              }
+        
+            var api_url=BASE_URL+"api_passenctypt";
+        
+             $.ajax({
+                          url: api_url,
+                          type: 'POST',
+                          data: {
+                          password:password
+                           },
+                          dataType: 'JSON',
+                          cache: false,
+        
+                          success: function(data){
+                   // console.log(data);
+                   
+                                var result=data;
+                                console.log(result.user_pass);
+                                   passwd=result.user_pass;
+                                  //$('#encrptpass').val(passwd);
+                      
+                      get_excryptpass(username,password,phnnumber,client_id,passwd,email,clickonbtn,otp_type,user_id,promo_code);
+                          }
+                      });
+        
+        
+        });
+        
+        
+        
+         function  get_excryptpass(username,password,phnnumber,client_id,passwd,email,clickonbtn,otp_type,user_id,promo_code)
+         
+         {
+           $('.alert-danger1').html('');
+            $('.alert-success1').html('');
+           var  user_name =username;
+           var txtPassword=password;
+           var mob_num=phnnumber;
+           var email_id=email;
+           var clientid=client_id;
+           var passwd=passwd;
+        
+           //alert(passwd);
+           
+           //console.log(passwd);
+        
+           if(email_id == ""){
+          email_id="";
+        }
+        
+        if(mob_num == ""){
+          mob_num="";
+        }
+        
+           
+           
+           var api_url=BASE_URL+"web_registration_v1";
+            
+             clickonbtn.attr('disabled', 'disabled');
+             $('#phnnumber').attr('disabled', 'disabled');
+              $.ajax({
+                          url: api_url,
+                          type: 'POST',
+                          data: {
+                          username: user_name,
+                          password:passwd,
+                          phone_number:mob_num,
+                          pemail:email_id,
+                          client_id:clientid,
+                          otp_type:otp_type,
+                          user_id:user_id,
+                          promo_code:promo_code,
+                          device_id:'',
+                          agent_id:''
+                          },
+                          dataType: 'JSON',
+                          cache: false,
+        
+                          success: function(data){
+                                var result=data;
+                                console.log(result);
+                                if(result.status=="1"){
+                                     $("#user_id").val(data.user_id);
+                        
+                                      //$('#myModal').modal('toggle');
+                                      $('.alert-success1').show();
+                                        $('.alert-success1').append(result.msg);
+                                          setTimeout(function() {
+                                                $('.alert-success1').fadeOut();
+                                                
+                                          }, 1500);
+                                    
+                                      if(clickonbtn.data('type')=="email_data"){
+                                           $("#emailotpbox").show();
+                                                }
+                                     if(clickonbtn.data('type')=="mobile_data"){
+                                           $("#enterotp").show();
+                                                }
+                                    // clickonbtn.removeAttr('disabled', 'disabled');
+        
+                                    var left_time = 30;
+                                    if(clickonbtn.attr('name') != 'no_otp'){
+                                      clickonbtn.closest('.row_margin').find('.hideandshow').removeClass('hidden');
+                                      timeinerval=setInterval(function() {
+                                        left_time = left_time < 10 ? '0'+left_time: left_time;
+                                        clickonbtn.html("&ensp;&emsp;"+left_time+"&emsp;&ensp;");
+                                        left_time = parseInt(left_time)-1;
+                                        $("#mobileotpbox").css("display","block");
+                                        if(left_time == 0)
+                                        {  
+                                           clickonbtn.html('Resend OTP');
+                                           clickonbtn.css('font-size','13px');
+                                           clickonbtn.css('padding-left','10px');
+                                           clickonbtn.removeAttr('disabled', 'disabled');
+                                           $('#phnnumber').removeAttr('disabled', 'disabled');
+                                           clearInterval(timeinerval);
+                                        }
+                                      }, 1000);
+                                    }else{
+                                       window.location.href="main.html";
+                                    }
+                                    $('#'+otp_type).val('1');
+        
+                                    // var mobile_otp = $('#mobile_otp').val();
+                                    // var email_otp = $('#email_otp').val();
+                                    // if(is_mobile == 0 && mobile_otp == 1 &&  is_email == 0  && email_otp == 1){
+        
+                                    // $('#final_submit').removeAttr('disabled', 'disabled');
+                                    // }else if(is_mobile == 0 && mobile_otp == 1){
+                                    //    $('#final_submit').removeAttr('disabled', 'disabled');
+                                    // }else if(is_email == 0  && email_otp == 1){ 
+                                    //      $('#final_submit').removeAttr('disabled', 'disabled');
+                                    // }else{
+                                    //    setTimeout(function() {
+                                    //   var current_method = '<?= $current_method ?>';
+          
+                                    //   if (current_method != 'signup'){ 
+                                    //     login_passencript(user_name,passwd,'');
+                                    //   }else{
+                                    //     window.location.href = "{{ Config::get('constants.BASE_URL') }}"+"/registersuccess"; 
+                                    //   }
+                                    //         //location.reload();
+                                    //   }, 3000);
+                                    // }
+        
+                                }else{
+                      
+                                    
+                                    str = result.msg.replace(/,\s*$/, "");
+                                    str = str + '.';
+                                    if(str.search("username") > -1)
+                                    {
+                                      $('.validationText4').text(str)
+                                    }else if(str.search("email") > -1){
+                                      $('.validationText5' ).text(str)
+                                    }else if(str.search("Phone") > -1){
+                                      $('.validationText2').text(str)
+                                    }else{
+                                    $('.alert-danger1').show();
+                                    $('.alert-danger1').append(str);
+                                    setTimeout(function() {
+                                    $('.alert-danger1').fadeOut();      
+                                                    }, 1500);
+                                    }
+                                   clickonbtn.removeAttr('disabled', 'disabled');
+                                   $('#phnnumber').removeAttr('disabled', 'disabled');
+                                   
+                                }
+        
+        
+                          },
+                          error: function(data){
+        
+                              var errors = data.responseJSON.errors;
+                             console.log(errors);
+        
+                              $.each(errors, function(key, value){
+                                 clickonbtn.removeAttr('disabled', 'disabled');
+                                $('.alert-danger1').show();
+                                $('.alert-danger1').append('<p>'+value+'</p>');
+                              });
+                          }
+        
+                          });
+           
+         }
+        
+        
+        
+        // $("#phnnumber").on("click",function(){
+        // var username=$("#username").val();
+        // var password=$("#password").val();
+        // var email=$("#email").val();
+        // var phnnumber=$("#phnnumber").val();
+        // var checkin=$("#checkin").val();
+        
+        // if(email == null){
+        //   email=null;
+        // }
+        
+        // if(phnnumber == null){
+        //   phnnumber=0;
+        // }
+        
+        //  if(checkin == null){
+        //  checkin = null;
+        //  }
+        
+        
+        //    if(phnnumber!='')
+        //     {
+        //         if(final_otp=='')
+        //         {
+        //          $('.validationText2' ).html('');
+        //          $('.finalopp' ).html("Please Enter OTP");
+        //              return false;
+        //         }
+        //     }
+        //     if(email!='')
+        //     {
+        //       if(mail_otp=='')
+        //       {
+        //        $('.finalopp' ).html('');
+        //        $('.mailopp' ).html("Please Enter OTP");
+        //            return false;
+        //       }
+        //     }   
+        
+        
+        // });
+        
+        
+           $(document).on('click',"#sign_up", function(){
+             console.log("Signup clickd");
+              $('.alert-danger1').html('');
+            $('.alert-success1').html('');
+              $('.alert-success1').hide();
+            $('.alert-danger1').hide();
+            
+               var username  =  $("#username").val();
+               console.log(username);
+               var password=$("#password").val();
+               var email=$("#email").val();
+               var phnnumber=$("#phnnumber").val();
+               var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+               var otp_type = $(this).attr('name');
+               var clickonbtn = $(this);
+               var promo_code   =  $('.checkin').val();
+               var volid_promo = true;
+        
+              if (typeof $("#enterotp").val() == undefined){var mobileotpbox = ''; }else{  var mobileotpbox = $("#mobileotpbox").val(); }
+              if (typeof $("#emailotpbox").val() == undefined){var emailotpbox = ''; }else{  var emailotpbox = $("#emailotpbox").val(); }
+            //  alert(mobileotpbox)
+            //  alert(emailotpbox)
+            var user_id =  $('#user_id').val();
+        
+        
+            // var volid_promo = true;
+            // var device_type = "Browser";
+            // var browser_type = getmybrower();
+            // var longitude = "75.7870025634766";
+            // var latitude = "26.9123992919922";
+            // var city = "jaipur";
+            // var state = "Rajasthan";
+            //var state="is_web";
+            //var imei="";
+            //var device_id="";
+            // var version_no = '{{ $version_app }}';
+           //alert(user_name+"-"+txtPassword+"-"+txtConfirmPassword+"-"+mob_num+"-"+clientid);
+           //alert(mail_otp+'--------'+final_otp);
+            if(username=='')
+               {
+                 $('.validationText4' ).html("Please Enter Username");
+                  $('#username').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+              }else{
+                 $('.validationText4' ).html('');
+                 $('#username').css('border','1px solid rgb(206, 212, 218)');
+              }
+            
+              if(username.length < 6)
+                 {
+                   $('.validationText4' ).html("Minimum 6 characters required");
+                    $('#username').css('border','1px solid rgb(206, 24, 24)');
+                   return false;
+                }else{
+                   $('.validationText4' ).html('');
+                   $('#username').css('border','1px solid rgb(206, 212, 218)');
+                }
+        
+            if(password=='')
+               {
+               
+                 $('.validationText4' ).html('');
+                
+                 $('.validationTextp' ).html("Please Enter Password");
+                 $('#password').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+              }else{
+                 $('.validationTextp' ).html('');
+                 $('#password').css('border','1px solid rgb(206, 212, 218)');
+              }
+            
+              if(is_email === 1 && email==''){
+               $('.validationText5' ).html("Please Enter Email");
+                $('#email').css('border','1px solid rgb(206, 24, 24)');
+                return false;
+              } else {
+               $('.validationText5' ).html("");
+               $('#email').css('border','1px solid rgb(206, 212, 218)');
+              }
+            if(email!=''){
+              if(email.match(mailformat)) {
+                if(email.match(/\s/g)){
+                  $('.validationText5' ).html("Please Enter Valid Email");
+                  $('#email').css('border','1px solid rgb(206, 24, 24)');
+                  return false;
+                }else{
+                $('.validationText5' ).html("")
+                $('#email').css('border','1px solid rgb(206, 212, 218)');
+              }
+              } else {
+                $('.validationText5' ).html("Please Enter Valid Email");
+                $('#email').css('border','1px solid rgb(206, 2, 24)');
+                return false;
+              }
+            }
+            
+            if(is_mobile === 1 && phnnumber==''){
+                 $('.validationText2' ).html("Please Enter Mobile Number");
+                 $('#phnnumber').css('border','1px solid rgb(206, 24, 24)');
+                return false;
+              } else {
+                $('.validationText2' ).html("")
+                $('#phnnumber').css('border','1px solid rgb(206, 212, 218)');
+              }
+            
+        
+            if(phnnumber!='')
+               {
+                if($('#phnnumber').val().length != 10){
+                $('.validationText1' ).html('');
+                 $('.validationText2' ).html("Please Enter Valid Mobile Number");
+                 $('#phnnumber').css('border','1px solid rgb(206, 24, 24)');
+                 return false;
+               }else {
+                $('.validationText2' ).html('');
+                $('#phnnumber').css('border','1px solid rgb(206, 212, 218)');
+              }
+              } 
+        
+            if(phnnumber!='')
+            {
+                if(mobileotpbox=='')
+                {
+                 $('.validationText2' ).html('');
+                 $('.mobileopp' ).html("Please Enter OTP");
+                     return false;
+                }
+            }
+            if(email!='')
+            {
+              if(emailotpbox=='')
+              {
+               $('.mobileopp' ).html('');
+               $('.mailopp' ).html("Please Enter OTP");
+                   return false;
+              }
+            }
+            
+            if($("#chb1").is(':checked') == false){
+               $('.mailopp' ).html('');
+                  $(".validationText3").text("Please accept terms and condition").show();
+              return false;
+            }
+           
+            if(promo_code != '')
+            {
+              volid_promo = checkpromovalid(promo_code,'signup',0);
+            }
+
+            if(volid_promo == false){
+              return false;
+            }
+        
+            var api_url=BASE_URL+"confirmotp_v1";
+        
+             $('#sign_up').attr('disabled', 'disabled');
+              // $(".validationText3").text("").hide();
+             
+             
+              $.ajax({
+                          url: api_url,
+                          type: 'POST',
+                          data: {
+                          user_id : user_id,
+                          username: username,
+                          password:password,
+                          phone_number:phnnumber,
+                          otp:mobileotpbox,
+                          mailotp:emailotpbox,
+                          client_id:client_id,
+                          promo_code,promo_code,
+                          device_type:0,
+                          browser_type:0,
+                          longitude:0,
+                          latitude:0,
+                          version_no:0,
+                          device_id:'',
+                          is_autologin_user:"",
+                          },
+                          dataType: 'JSON',
+                          cache: false,
+                          async:false,
+        
+                          success: function(data){
+                                var result=data;
+                                console.log(result);
+                                if(result.status=="1"){
+                               
+                                  $('.alert-success1').show();
+                                    $('.alert-success1').append(result.msg);
+        
+                                    // window.location.href="main.html";
+                                    $("#notshows").hide();
+                                    $("#form-cont").hide();
+                                    $(".mx").hide();
+                                    $("#show-cont").show();
+                                      setTimeout(function() {
+                                            $('.alert-success1').hide();
+                                            //location.reload();
+                                      }, 2000);
+                                      
+                                }else{
+                                  console.log("unable to create user");
+                    $('#sign_up').removeAttr('disabled', 'disabled');
+                   
+                     $('.alert-danger1').show();
+                        $('.alert-danger1').append(result.msg);
+                      setTimeout(function() {
+                            $('.alert-danger1').hide();
+                                            
+                                      }, 1500);
+                        
+                                }
+                          },
+                          error: function(data){
+        
+                              var errors = data.responseJSON.errors;
+                            //  console.log(errors);
+        
+                              $.each(errors, function(key, value){
+        
+                                $('.alert-danger1').show();
+                                $('.alert-danger1').append('<p>'+value+'</p>');
+                              });
+                          }
+        
+                          });
+            
+            
+            
+           });
+
+function checkpromovalid(promo_code,type,userid)
+{
+  // if(promo_code.length == 10){
+  //   var promotion_type='referral';
+  // }else{
+    var promotion_type=type;
+  // }
+  var result_p = true;
+      var api_url1=BASE_URL+"check_promotioncode"; 
+      jQuery.ajax({
+        type: 'POST',
+        url: api_url1,
+        data: {
+        user_id: userid,
+        promotion_type:promotion_type,
+        client_id:client_id,
+        promo_code:promo_code,
+        }, 
+        dataType: 'json',
+        cache: false,
+        async:false,
+        success: function(data1) { 
+        console.log(data1);
+        if(data1.status==0)
+        {
+         result_p = false;
+         $('.promo_code_valid').text(data1.message);
+         $('.promo_validation').text(data1.message);
+        }
+            
+        }
+        });
+        return result_p;
+}
+        
+        function reset_f(){
+          $("#username").removeAttr("style");//done
+          $("#password").removeAttr("style");//done
+          $("#phnnumber").removeAttr("style");//done
+          $("#mobileotpbox").val("");//done
+          $("#username").val('');//done
+          $("#password").val('');//done
+          $("#phnnumber").val("");//done
+          $("#email").val("");//done
+          $("#emailotpbox").val("");
+          $("#enterotp").val("");  //done
+          $("#checkin").val(""); //done
+          $("#chb").prop("checked",false);
+          $("#chb1").prop("checked",false);
+          $("#checkin").addClass('hidden');  
+        }
+        
+        
+        </script>
+     
+	
+
+
+<script>
+function validatePhoneField( field ) {
+  var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+    match = field.value.match(pattern);
+
+  if (match) {
+    field.value = "(" + match[1] + ")" + " " + match[2] + "-" + match[3];
+    return true;
+  } else {
+    alert("promocode enter minimum six maximum 10");
+    return false;
+  }
+}
+</script> 
+
+
+<script>
+function validatePhoneFields( field ) {
+  var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+    match = field.value.match(pattern);
+
+  if (match) {
+    field.value = "(" + match[1] + ")" + " " + match[2] + "-" + match[3];
+    return true;
+  } else {
+    alert("Enter minimum six number" );
+    return false;
+  }
+}
+</script> 
+</body>
+</html>

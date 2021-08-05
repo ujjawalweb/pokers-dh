@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+<link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/animate.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<style type="text/css" media="screen">
+    header {
+        position: absolute;
+        background-color: #fff0;
+    }
+
+	.cn_bold2 {
+  font-size: 20px;
+  color: #000!important;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 0 0 20px 0;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}.flex-container>div {
+  width: 50%;
+  text-align: center;
+  line-height: 35px!important;
+  font-size: 30px;
+}.flex-image {
+  display: flex;
+  flex-wrap: wrap;
+}.flex-image>div {
+  width: 20%;
+}.content_wrapperh img {
+  max-width: 100%;
+}.content_wrp li {
+  font-size: 16px;
+  color: #000 !important;
+  padding: 0 0 0 0 !important;
+  margin: 10px 0;
+  list-style-type: disc;
+}
+label
+{
+    color: black !important;
+}
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 500px;
+        padding-top: 17px;
+    }
+
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        .shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+    /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+		.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+    /* ----------- iPhone X ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        .center {
+            display: block;
+            margin-left: auto;
+            width: 100%;
+            margin-right: auto;
+        }
+		.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+.about-us__card-wrapper {
+    display: grid;
+    grid-template-columns: auto 50%;
+    grid-template-rows: none;
+    grid-gap: 16px;
+    margin-bottom: 32px;
+}
+.about-us__card {
+    padding: 16px;
+    background-color: #085426;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+}
+@media (max-width: 767.98px){
+.about-us__card-wrapper {
+    grid-template-columns: 100%;
+}
+.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+}
+	body{
+		/* background: #0b122e; */
+	}.cn_regular {
+    font-size: 16px !important;
+    color: #000!important;
+    font-family: 'Rajdhani', sans-serif !important;
+    padding: 0 0 20px 0;
+}
+</style>
+</head>
+<body>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <div class="container cc">
+    <a class="navbar-brand" href="index.html"><img src="images/dhamaal_poker.png" width="100"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+    <li><button class="my-btn d-none"> &nbsp;<i class=" fa fa-apple"></i> &nbsp;|  &nbsp;<i class="fa fa-windows"></i>  &nbsp;Get Desktop App</button></li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="howtoplay.html">How to Play</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj3 two" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Promotions
+
+          </a>
+          <!-- <div class="dropdown-menu ss3" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj4 three" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Download
+
+          </a>
+         <!--  <div class="dropdown-menu ss4" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+
+
+
+
+ 
+      </ul>
+    </div>
+    </div>
+  
+  </nav> 
+
+
+  <!--banner-->
+
+
+  <section class="how-to-play-section text-justify">
+    <div class="container ">
+        <div class="site-heading">
+            <h2 style="font-size: revert;padding-top: 50px;text-align: center;text-transform: uppercase;
+padding-bottom: 21px;"><span class="span_heading">Contact US</span></h2>
+
+        </div>
+        <!-- <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyEEhYLozEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+        <div class="row shadow-box">
+            <div class="col-md-12">
+            <div class="content_wrapperh">
+                <p style="color: #46474f;
+                font-weight: 600;">We encouraged our players to interact with us by way of comments, reviews, feedback, questions, concerns or complaints of any issues they may face on www.pokerdhamaal.com. Every interaction is examined and due responses are provided by our team. We assure you that our team is committed to providing you with exceptional service and we will get back to you as soon as possible.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="margin-bottom: -3%;">
+    <div class="container">
+        <div class="contact_form_Sec">
+            <div class="row row1">
+                <div class="col-md-6">
+                    <div class="col1">
+                        <p class="cn_bold2">CONTACT FORM</p>
+                        <p class="pd-15">Contact us with your query. We would be happy to answer your questions.</p>
+                        <!-- <div class="alert alert-danger" style="display:none"></div>
+                        <div class="alert alert-success" style="display:none"></div> -->
+                        <form class="mb-0" style="border: 1px solid darkgrey;
+                        padding: 25px;
+                        border-radius: 16px;
+                        margin-bottom: 54px !important;">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name"
+                                    name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Email"
+                                    name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="number" class="form-control" id="phone" placeholder="Enter phone"
+                                    name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" id="message" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="validationText" style="color: red;font-size: 12px;"></div>
+                            </div>
+                            <button type="button" id="complaint_submit" class="theme-btn" style="
+                                color: cadetblue;
+                                border: 1px solid #a1aed4;
+                                border-radius: 7px;    padding: 7px;
+                                background: transparent;
+                            ">Submit</button>
+                            <div class="alert alert-danger" style="display:none"></div>
+                        <div class="alert alert-success" style="display:none;margin-top: 11px;
+    margin-bottom: -1px;"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col1">
+                        <h4 class="adras" style="text-align: justify;color: #a1aed4;padding-top: 26%;">Ground Floor, F-45, Okay Plus Spaces, Near Apex Circle, Malviya
+Nagar Industrial Area, Jaipur, Rajasthan, 302017</h4>                        
+                        <img src="images/rewarding.png" width="56%" style="padding-top:30px;    margin-left: 25%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <div class="container-fluid">
+<div class="container">
+<div class="row mt-5">
+<div class="col-md-12"><h2 class="text-center">How To Play Poker</h2></div>
+</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+<div class="container-fluid bgss p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="images/dhamaal_poker.png" width="140" class="logg"></div>
+
+     <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+   <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="responsible.html">Responsible Play</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="termsofuse.html">Terms of Use</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  
+  <!-- <li style="display: flex;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li> -->
+</ul>
+
+      </div>
+      <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li>&nbsp;&nbsp;
+  <li style="display: flex;margin-bottom: -19px;"><a style="color: white;" href="aboutus.html">About us</a></li>&nbsp; &nbsp;
+</ul>
+
+      </div>
+        
+        
+              <div class="col-md-6 mt-3"><i class="fa fa-android"></i> &nbsp;&nbsp;  <i class="fa fa-windows"></i>&nbsp;&nbsp;  <i class="fa fa-apple"></i>&nbsp;&nbsp;  <i class="fa fa-ios"></i></div>
+        
+              <div class="col-md-6 mt-3">
+                <div class="social-links">
+                  <a href="#"><i class="fa fa-google"></i></a> &nbsp;&nbsp; 
+                  <a href="https://www.facebook.com/Dhamaal-Games-100416855517758" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp; 
+                  <a href="https://www.instagram.com/dhamaalgames/" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp; 
+                  <a href="https://twitter.com/DhamaalGames" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+                </div>
+        
+              </div>
+        
+              <div class="col-md-12 mt-4">
+                <h5 class="text-white">Approved by Major Banks of India</h5>
+              </div>
+                <span class="ico">
+              <div class="col-md-1 mt-3"><img src="images/gp.png" class="ims" ></div>&nbsp;&nbsp;
+        
+        
+              <div class="col-md-1 mt-3"><img src="images/pay.png" class="ims"></div>&nbsp;&nbsp;
+              <div class="col-md-1 mt-3"><img src="images/pu.png"class="imn" ></div>&nbsp;&nbsp;&nbsp;
+        
+              <div class="col-md-1 mt-3"><img src="images/master.png" class="ims"></div>&nbsp;&nbsp;
+            </span>
+              <hr class="new">
+              <div class="row">
+        <div class="col-6 mt-4" style="display: flex;justify-content: space-around;">
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="contactus.html" style="color: white;">Contact Us</a></h5>
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Legality</a></h5>
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Withdrawal</a></h5>
+        </div>
+
+<div class="col-6 mt-4 my-c" style="position: relative;left:430px;"><h5 class="text-white"style="font-size:17px;">© 2021 Poker Dhamaal. All rights reserved.</h5></div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="form-popup" id="myForm">  
+  <div class="container">
+    <div class="frame wow fadeInDown" data-dismiss="modal">
+      <div class="nav">
+        <ul class="links">
+          <span class="signin-active text-white"><a class="btn  btt" data-li="login">Sign in</a></span>
+          <span class="signup-inactive text-white"><a class="btn btt" data-button="video" data-li="signup">Sign up </a></span>
+        </ul>
+      </div>
+      <div ng-app ng-init="checked = false">
+  
+                  <form class="form-signin" action="" method="post" name="form">
+           <h5 class="text-center play">LOGIN AND PLAY</h5>
+            <input class="form-styling" type="text" name="username" placeholder="Username"/>
+          
+            <input class="form-styling" type="password" name="password" placeholder="Password"/>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1" style="font-size: 13px;">
+    
+          Remember me</label>
+            <div class="btn-animate">
+              <a class="btn-signin">Login</a>
+        
+            </div>
+        
+    
+                  </form>
+          
+                
+                  <form class="form-signup" action="" method="post" name="form">
+            <h5 class="text-center play">	SIGNUP AND START WINNING</h5>
+              <div class="row">
+              <div class="col-md-12">
+           
+            <input class="form-styling" type="text" name="fullname" placeholder="Username"/>
+        </div><br>
+        
+        <div class="col-md-6">
+          
+            <input class="form-styling" type="Password" name="fullname" placeholder="Password"/><br>
+        </div>
+        
+        <div class="col-md-6">
+       
+            <input class="form-styling" type="password" name="fullname" placeholder="Confirm Password"/><br>
+        </div>
+            <div class="col-md-12">
+          
+            <input class="form-styling" type="text" name="mobile" placeholder="Mobile No"/>
+        </div>
+        
+            <div class="col-md-6">
+            <input type="checkbox" id="myCheck"  name="vehicle2" value="Bike">
+            <label for="myCheck" style="font-size: 13px;white-space:nowrap;">
+    
+          Have a promocode?</label>
+         </div>
+       
+               <div class="col-md-6 mt-2">
+                <input class="form-styling" type="text" name="code" id="udd" placeholder="Enter Code"/  style="width:122px!important;margin-left:40px;margin-top:-5px;">
+     </div>
+     
+     
+     <div class="col-md-12">
+             <input type="checkbox" id="vehicle3" name="vehicle3" value="Bike">
+            <label for="vehicle3" style="font-size: 13px;">
+    
+          I accept to the terms and conditionsand Privacy Policy.</label>
+    
+       </div>
+         
+       
+            <a  class="btn-signup text-white">Sign Up</a>
+        
+            </div>
+      
+                  </form>
+        
+
+        
+     
+  
+      
+
+  <div id="close"><a class="text-white" href="">X</a></div>
+  
+  </div></div>
+  </div>
+  </div>  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>    
+  function isEmail(email) {
+    var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+  }
+
+  $('#complaint_submit').on("click",function(){
+    $('.alert-danger').html('');
+    $('.alert-success').html('');
+      $('.alert-success').hide();
+    $('.alert-danger').hide();
+    $('.validationText').html('');
+    
+    var user_name = $("#name").val();
+    var email = $("#email").val();
+    var mobile = $("#phone").val();
+    var description = $("#message").val();
+    var client_id = "<?=  isset($client_id) ? $client_id : 0; ?>";
+    // var user_id = "<?php echo Session::get('user_id'); ?>";
+    var user_id = "0";
+    if(user_name=='')
+    {
+      $('.validationText').html("Please Enter User Name!!!");
+      return false;
+    }
+    if(email=='')
+    {
+      $('.validationText').html("Please Enter Email!!!");
+      return false;
+    }
+    if(!isEmail(email))
+    {
+      $('.validationText').html("Please Enter Valid Email!!!");
+      return false;
+    }
+    if(mobile=='')
+    {
+      $('.validationText').html("Please Enter Mobile No!!!");
+      return false;
+    }
+    if(mobile.length!=10)
+    {
+      $('.validationText').html("Please Enter 10 Digit Mobile No!!!");
+      return false;
+    }
+    if(description=='')
+    {
+      $('.validationText').html("Please Enter Description!!!");
+      return false;
+    }
+    var BASEURL = 'https://api.ludodhamaal.com/index.php/Web_service/';
+    var client_id = 99;
+    $('#complaint_submit').attr('disabled', 'disabled');
+    var api_url1=BASEURL+"add_complaint_request"; 
+    $.ajax({
+      type: 'POST',
+      url: api_url1,
+      data: {
+        user_id: user_id,
+        user_name:user_name,
+        description:description,
+        email:email,
+        mobile:mobile,
+        client_id:client_id
+      }, 
+      dataType: 'json',
+      cache: false,
+      success: function(data){
+        var result=data;
+        if(result.status=="1"){
+          $('.alert-success').show();
+          $('.alert-success').append('<p>'+result.msg+'</p>');
+            setTimeout(function() {
+              $('.alert-success').show();
+              location.reload();
+            }, 2000);
+        }else{
+          $('#complaint_submit').removeAttr('disabled', 'disabled');
+          $('.alert-danger').show();
+          $('.alert-danger').append('<p>Something went wrong!!</p>');
+          setTimeout(function() {
+            $('.alert-danger').hide();
+          }, 2000);
+            
+          $('#submitbtn').removeAttr('disabled', 'disabled');
+        }
+      },
+      error: function(data){
+        var errors = data.responseJSON.errors;
+        $.each(errors, function(key, value){
+          $('.alert-danger').show();
+          $('.alert-danger').append('<p>'+value+'</p>');
+        });
+      }
+    });
+  });
+</script>
+
+
+  
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+  
+
+      <!-- jQuery library -->
+      <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="bootstrap/js/wow.js"></script>
+
+<script>
+new WOW().init();
+</script>
+
+<script>
+  var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+</script>
+
+
+
+ 
+
+
+
+
+<script>
+  function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    
+    } else {
+      text.style.display = "none";
+    }
+  }
+      </script>
+  
+  
+  <script>
+  $(function() {
+    $(".btn").click(function() {
+      $(".form-signin").toggleClass("form-signin-left");
+      $(".form-signup").toggleClass("form-signup-left");
+      $(".frame").toggleClass("frame-long");
+      $(".signup-inactive").toggleClass("signup-active");
+      $(".signin-active").toggleClass("signin-inactive");
+      $(".forgot").toggleClass("forgot-left");   
+      $(this).removeClass("idle").addClass("active");
+    });
+  });
+  
+
+
+  </script>
+
+
+  <script>
+    function openForm(event) {
+		document.getElementById("myForm").style.display = "block";
+		if(event.getAttribute("data-btn") == 'login')
+		{
+			if(document.querySelector(`.signin-active`).classList.contains('signin-inactive'))document.querySelector(`a[data-li="login"]`).click();
+			return;
+		}
+		if(!document.querySelector(`.signup-inactive`).classList.contains('signin-active'))document.querySelector(`a[data-li="signup"]`).click();
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#close").click(function(){
+          $(".frame,#close").hide();
+          
+        });
+  
+        $(".my-btn ").click(function(){
+          $(".frame,#close").show();
+          
+        });
+        
+      });
+    </script>   
+ 
+
+	<script>
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("udd");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	
+  } else {
+    text.style.display = "none";
+  }
+}
+		</script>
+		
+		<script>
+		$(document).ready(function(){
+  $("#myCheck").click(function(){
+    $("#udd").show();
+	
+  });
+  
+
+  
+});
+</script>
+
+
+
+
+
+  <script>
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+const param = getParameterByName('open') || '';
+if(param === 'video') document.querySelector(`button[data-button="video"]`).click();
+
+
+
+</script>
+
+
+
+
+<script>
+var linkClicked = document.getElementsByClassName('nav-link');
+var numClass = linkClicked.length;
+
+for (var i = 0; i < numClass; i++) {
+		linkClicked[i].addEventListener('click', function(){
+      var onTheMoment = document.getElementsByClassName('active');
+			onTheMoment[0].className = onTheMoment[0].className.replace(' active', '');
+			this.className += ' active';
+    }, false);
+	}
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj2").click(function(){
+    $(".ss2").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj3").click(function(){
+    $(".ss3").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj4").click(function(){
+    $(".ss4").slideToggle();
+  });
+});
+
+
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj5").click(function(){
+    $(".ss5").slideToggle();
+  });
+});
+
+
+</script>
+</body>
+</html>

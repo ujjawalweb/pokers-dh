@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Dhamaal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/> 
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/animate.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<style type="text/css">
+  @media (max-width: 575px)
+{
+  .splres
+  {
+    color: white;
+    background: rgb(13,120,11,.47);
+    backdrop-filter: blur(0px);
+    padding: 10px 31px !important;
+    margin-top: 2px !important;
+    margin-bottom: 43px !important;
+    font-weight: 600;
+    white-space: pre !important;
+    margin-left: 56% !important;
+    font-size: large !important;
+    position: relative;
+    border-radius: 10pc;
+    border: 2px solid white;
+  }
+  .res2
+  {
+    font-size: 15px !important;
+    margin-left: 50% !important;
+  }
+}
+</style>
+
+</head>
+<body>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <div class="container cc">
+    <a class="navbar-brand" href="index.html"><img src="images/dhamaal_poker.png" width="100"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+     <li><button class="my-btn d-none"> &nbsp;<i class=" fa fa-apple"></i> &nbsp;|  &nbsp;<i class="fa fa-windows"></i>  &nbsp;Get Desktop App</button></li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="howtoplay.html">How to Play</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj3 two" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Promotions
+
+          </a>
+          <!-- <div class="dropdown-menu ss3" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj4 three" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Download
+
+          </a>
+         <!--  <div class="dropdown-menu ss4" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+
+
+
+
+ 
+      </ul>
+    </div>
+    </div>
+  
+  </nav> 
+
+
+  <!--banner-->
+<div class="banner">
+<img src="images/tbs.png">
+<div class="txts">
+<!-- <h2>India's biggest poker plateform</h2> -->
+
+
+  <h2 style="
+  /*margin-left: -24%;*/
+    margin-top: 10%;
+    font-size: xxx-large;
+    font-weight: 500;white-space: pre;
+    color: white !important;">Best Poker Application</h2>
+  <h3 class="res2" style="
+  /*margin-left: -24%;*/
+    margin-top: 10%;text-align: center;
+    font-weight: 100;
+    color: white !important;">Trusted and Developed by Indians</h3>
+    <a href="signup.html"><button class="splres" style="    color: white;background: rgb(13,120,11,.47);
+    backdrop-filter: blur(0px);
+    padding: 10px 31px;margin-top: 41px;
+    font-weight: 600;
+    margin-left: 33%;font-size: x-large;
+    position: relative;
+    border-radius: 10pc;
+    border: 2px solid white;">SignUp & Play</button></a>
+</div>
+<!-- <div class="imd"><img src="images/mobile-1.png"class="mb"></div> -->
+
+</div>
+
+<div class="container-fluid">
+
+  <!-- <button class="my-btn log" data-btn="login" onclick="openForm(this)">Login</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+  <!-- <a href="signup.html"><button class="my-btn log" data-btn="signup">Signup</button></a> -->
+<div class="container">
+<div class="row upper">
+<div class="col-md-4 mtop-minus">
+<div class="colour-box colour-box--arrow">
+  <div class="colour-box__icon"> </div>
+ 
+  <h1 class="colour-box__title">6 Years</h1>
+  <p class="colour-box__text text-white">Still in indians hand</p>
+</div>
+</div>
+
+<div class="col-md-4 mtop-minus">
+<div class="colour-box colour-box--arrow">
+  <div class="colour-box__icon"></div>
+  <h1 class="colour-box__title">3 Lakhs</h1>
+  <p class="colour-box__text text-white">Active users</p>
+</div>
+</div>
+
+
+<div class="col-md-4 mtop-minus">
+<div class="colour-box colour-box--arrow">
+  <div class="colour-box__icon"></div>
+  <h1 class="colour-box__title">1 Lakh</h1>
+  <p class="colour-box__text text-white">Average Hands Daily.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<div class="container-fluid my-bag">
+<div class="container">
+<div class="row mt-5 p-3">
+<div class="col-md-12"><h2 class="text-center">Shake Hands with Professional Players</h2></div>
+
+<div class="col-md-6 mt-4 mb-5"><img src="images/hand1.png" class="img1" width="500"></div>
+<div class="col-md-6 mt-4 mb-5"><img src="images/hand2.png" class="img2" width="500"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+<div class="container">
+<div class="row mt-5">
+<div class="col-md-12"><h2 class="text-center">Poker Variants</h2><p class="text-center">Poker Dhammal have all three popular poker variants, Go through application and be sure about How to Play.</p></div>
+
+<div class="col-md-4 mt-4 mb-4 text-center"><img src="images/p1.png" class="new-img" width="350"><h4 class="mt-3 text-center">No Limit Hold'em &nbsp; &nbsp;
+  <!-- <i class="fa fa-arrow-right"></i> -->
+</h4></div>
+<div class="col-md-4 mt-4 mb-4 text-center"><img src="images/p2.png" class="new-img" width="350"><h4 class="mt-3 text-center">Friends Table &nbsp; &nbsp;
+  <!-- i class="fa fa-arrow-right"></i> -->
+</h4></div>
+<div class="col-md-4 mt-4 mb-4 text-center"><img src="images/p3.png" class="new-img"  width="350"><h4 class="mt-3 text-center">Pot Limit Omaha &nbsp; 
+  <!-- nbsp;<i class="fa fa-arrow-right"></i> -->
+</h4></div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="container-fluid my-bag">
+<div class="container">
+<div class="row mt-5">
+<div class="col-md-12 mt-5"><h2 class="text-center">Play our weekly and daily tournaments</h2><p class="text-center">From minimum to maximum stakes, Exciting prizes at every level and Each rank with some guaranteed gifts.</p></div>
+
+
+<div class="col-md-12 text-center mt-3"><img src="images/hand3.png" class="img3" width="1100"></div>
+<!-- <div class="col-md-12 mt-5"><img src="images/hand4.png" class="img3" width="1100"></div> -->
+
+<div class="col-md-4 mt-5 text-center mb-5"><img src="images/hand5.png" class="tou"> </div>
+<div class="col-md-4 mt-5 text-center mb-5"><img src="images/hand4.png" class="tou tops"> </div>
+<div class="col-md-4 mt-5  text-center mb-5"><img src="images/hand6.png" class="tou tops"></div>
+</div>
+</div>
+</div>
+
+
+
+<section class="testimonial text-center">
+        <div class="container">
+
+           
+            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+             
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p class="text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 1</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" /><p class="text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 2</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p class="text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 3</h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+<div class="container-fluid my-bag p-5">
+<div class="container green"style="border-radius:10px;">
+<div class="row">
+<div class="col-md-6"><h2 class="text-white mt-5">Join the Community</h2><p class="text-white">Every minute 5 players choose and get register under poker dhamaal and pursue a memorable moments on table. Shake hands with our players, and be the winner.</p></div>
+<div class="col-md-6"><div class="social">
+  <a target="_blank" href="https://www.facebook.com/Dhamaal-Games-100416855517758"><i class="fa fa-facebook fb"></i></a> 
+  <a href="#" style="color: white;"><i class="fa fa-linkedin ld"></i></a> 
+  <a href="#" style="color: white;"><i class="fa fa-youtube yu"></i></a> 
+  <a href="https://twitter.com/DhamaalGames"><i class="fa fa-twitter tw"></i></a>  
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+<div class="container">
+<div class="row mb-3">
+<div class="col-md-12 text-center mt-5"><h2>Poker Game - Play Poker Online India</h2></div>
+
+<div class="col-md-6">
+  
+
+<div id="content">
+  <details>
+    <summary>What is Poker Game</summary>
+    <p>
+      Poker is a game which people play with a normal set (or deck) of 52 cards. Poker is completely a skill-based game. In poker, players make bets against each other depending on the value of their poker hand. Bets are usually made with plastic or ceramic discs called chips. Bets may also be made with real money, but chips are more often used because they are easier to handle and count.
+    </p>
+  </details>
+  <details>
+    <summary>Is Poker legal in India?</summary>
+    <p>
+     Yes, Poker is legal in India. However, some states are permitted by the Indian Constitution to enact laws regulating betting and gambling in their respective jurisdictions. In light of these powers, various States have enacted anti-gambling legislation. Such legislations are largely in accordance with the Public Gambling Act of 1867 (and include the exception of 'games of skill').
+    </p>
+
+  </details>
+  <details>
+    <summary>What are the variants of Poker?</summary>
+    <p>
+      No-Limit Texas Hold'em: Texas hold 'em is one of the most popular variants of poker. Two cards, known as hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages.
+    </p>
+    <br>
+    <p>
+      Pot Limit Omaha: Omaha Hold'em is a community card poker game similar to Texas hold'em, where each player is dealt four or five cards and must make his or her best hand using exactly two of them, plus exactly three of the five community cards.
+    </p><br>
+    <!-- <p>
+      Pineapple (Open Face Chinese) Poker: Pineapple OFC poker is played between either 2 or 3 players. It can be played in a sit and go format or cash. Unlike poker, this game is played without chips. A point system is followed to determine the score, with each point holding a certain value.
+    </p> -->
+  </details>
+  <details class="tangental">
+    <summary>I am unable to login to Poker Dhamaal account. What should I do?</summary>
+    <p>Please follow the steps below:</p>
+    <p>1. Your Login credential should be correct.</p>
+    <p>2. Your phone number should be correct and validated.</p>
+    <p>3. App should be updated with the latest version.</p>
+    <p>4. We also recommend you to clear cache and cookies from the browser and cache from the application and then re-login.</p>
+    <p>Note: In case all the above points are checked and ensured and if the still issue persists, we request you to share the screenshot or video at support@dhamaalgames.com or chat with us. We will immediately get it checked with our technical team.</p>
+  </details>
+
+<details class="tangental">
+    <summary>Does Poker Dhamaal have a bug bounty program?</summary>
+    <p>Yes, Poker Dhamaal has a bug bounty program. To know more, please mail us on support@dhamaalgames.com</p>
+  </details>
+
+  </div>
+
+
+
+
+  
+</div>
+
+
+
+
+<div class="col-md-6 next">
+  
+
+  <div id="content">
+    <details>
+      <summary>I am a school student. Can I also play?</summary>
+      <p>
+        Our services and products are not available to anybody who is under the age of 18 years on the day of them applying for membership through the registration process on the site. Also, it is strictly prohibited for any user under the age of 18 to play games on our website.
+<br><br>
+</p>
+    </details>
+
+
+    <details class="tangental">
+      <summary>What are cash games and what are the formats of cash games?</summary>
+      <p>Cash games, or ring games, are poker games in which players bet real money. Cash games have no designated start or stop time; they happen round the clock in online poker rooms as well as at tables in casinos. The amount of money cash game players may bet is as little or as much as the table allows
+      <br>
+      Cash table: Cash Game Tables can be played on our website or application using real cash bonuses or real cash chips.  
+      <br>
+      Play Money table: Practice Money Tables can be played on our website or software using our virtual tokens or Play Money. It does not have any monetary value and is only useful to practice poker. New players are advised to play this game.
+      </p>
+    </details>
+
+
+    <details>
+      <summary>What are Tournaments and what are the formats of tournaments? </summary>
+      <p>
+        A poker tournament is a tournament where players compete by playing poker. It can feature as few as two players playing on a single table, and as many as tens of thousands of players playing on thousands of tables.
+        <br>
+        The format of Poker Tournaments are:-
+        <br>
+        Single Table Tournaments: Like the name suggests, single table tournaments are those where all entrants sit at one table and the games continue till there’s one ultimate winner.
+        <br>
+        Sit-n-Go(SNG): Sit-n-Go tournaments don’t have a fixed start time. They start when the required number of players register. Usually, SNG tournaments are single table tournaments. There are few MTT & SNGs as well.
+        <br>
+        Multi-Table Tournaments: Multi-table tournaments are those where there are many players competing for a common prize pool. As players get eliminated, the number of tables keep shrinking. Finally, the remaining players move towards a ‘final table’ where the tournament is played out until there is a single winner
+      </p>
+      
+    </details>
+    <details>
+      <summary>What are the variants of Tournaments?</summary>
+      <p>
+        There are three variants of tournaments:-
+        <br>
+        Freeroll tournament: Costing nothing to enter, Freeroll tournaments of all types (Pot Limit Omaha, Hold’em) are available on an hourly basis. You could gain a particular achievement, tickets or cash prizes on a daily basis.
+        <br>
+        Guaranteed Tournament: Having a minimum fixed prize pool amount, no matter how many runners there are, a poker guaranteed tournament is a great way to boost your bankroll for a minimum investment as you climb your way to the top.
+        <br>
+        Freezeout tournament: One of the most popular type of poker tournaments, a Freezeout tournament is when you pay your buy-in and get your chips and play until you run out. You cannot rebuy into the tournament and once you run out of chips, it’s over.
+      </p>
+    </details>
+    <details>
+      <summary>10. What are the various hand ranking of Poker?</summary>
+      <p>
+        Hand Rankings of Poker from strongest to weakest includes:
+        <br>1. Royal Flush
+        <br>2. Straight Flush
+        <br>3. Four of a Kind
+        <br>4. Full House
+        <br>5. Flush
+        <br>6. Straight
+        <br>7. Three of a Kind
+        <br>8. Two Pair
+        <br>9. Pair
+        <br>10. High Card
+      </p>
+    </details>
+
+
+
+  
+    </div>
+  
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!--footer-->
+
+<div class="container-fluid bgss p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="images/dhamaal_poker.png" width="140" class="logg"></div>
+
+      <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+   <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="responsible.html">Responsible Play</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="termsofuse.html">Terms of Use</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  
+  <!-- <li style="display: flex;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li> -->
+</ul>
+
+      </div>
+      <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li>&nbsp;&nbsp;
+  <li style="display: flex;margin-bottom: -19px;"><a style="color: white;" href="aboutus.html">About us</a></li>&nbsp; &nbsp;
+</ul>
+
+      </div>
+
+
+      <div class="col-md-6 mt-3"><i class="fa fa-android"></i> &nbsp;&nbsp;  <i class="fa fa-windows"></i>&nbsp;&nbsp;  <i class="fa fa-apple"></i>&nbsp;&nbsp;  <i class="fa fa-ios"></i></div>
+
+      <div class="col-md-6 mt-3">
+        <div class="social-links">
+                  <a href="#"><i class="fa fa-google"></i></a> &nbsp;&nbsp; 
+                  <a href="https://www.facebook.com/Dhamaal-Games-100416855517758" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp; 
+                  <a href="https://www.instagram.com/dhamaalgames/" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp; 
+                  <a href="https://twitter.com/DhamaalGames" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+                </div>
+
+      </div>
+
+      <div class="col-md-12 mt-4">
+        <h5 class="text-white">Approved by Major Banks of India</h5>
+      </div>
+        <span class="ico">
+      <div class="col-md-1 mt-3"><img src="images/gp.png" class="ims" ></div>&nbsp;&nbsp;
+
+
+      <div class="col-md-1 mt-3"><img src="images/pay.png" class="ims"></div>&nbsp;&nbsp;
+      <div class="col-md-1 mt-3"><img src="images/pu.png"class="imn" ></div>&nbsp;&nbsp;&nbsp;
+
+      <div class="col-md-1 mt-3"><img src="images/master.png" class="ims"></div>&nbsp;&nbsp;
+    </span>
+      <hr class="new">
+      <div class="row">
+<div class="col-6 mt-4" style="display: flex;justify-content: space-around;">
+  <h5 class="text-white ujj cont" style="white-space: nowrap;font-size: 18px;"><a href="contactus.html" style="color: white;">Contact Us</a></h5>
+  <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Legality</a></h5>
+  <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Withdrawal</a></h5>
+</div>
+
+<div class="col-6 mt-4 my-c" style="position: relative;left:430px;"><h5 class="text-white"style="font-size:17px;">© 2021 Poker Dhamaal. All rights reserved.</h5></div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="form-popup" id="myForm">  
+  <div class="container">
+    <div class="frame wow fadeInDown" data-dismiss="modal">
+      <div class="nav">
+        <ul class="links">
+          <span class="signin-active text-white"><a class="btn  btt" data-li="login">Sign in</a></span>
+          <span class="signup-inactive text-white"><a class="btn btt" data-button="video" data-li="signup">Sign up </a></span>
+        </ul>
+      </div>
+      <div ng-app ng-init="checked = false">
+  
+                  <form class="form-signin" action="" method="post" name="form">
+           <h5 class="text-center play">LOGIN AND PLAY</h5>
+            <input class="form-styling" type="text" name="username" placeholder="Username"/>
+          
+            <input class="form-styling" type="password" name="password" placeholder="Password"/>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1" style="font-size: 13px;">
+    
+          Remember me</label>
+            <div class="btn-animate">
+              <a class="btn-signin">Login</a>
+        
+            </div>
+        
+    
+                  </form>
+          
+                
+                  <form class="form-signup" action="" method="post" name="form">
+            <h5 class="text-center play">	SIGNUP AND START WINNING</h5>
+              <div class="row">
+              <div class="col-md-12">
+           
+            <input class="form-styling" type="text" name="fullname" placeholder="Username"/>
+        </div><br>
+        
+        <div class="col-md-6">
+          
+            <input class="form-styling" type="Password" name="fullname" placeholder="Password"/><br>
+        </div>
+        
+        <div class="col-md-6">
+       
+            <input class="form-styling" type="password" name="fullname" placeholder="Confirm Password"/><br>
+        </div>
+            <div class="col-md-12">
+          
+            <input class="form-styling" type="text" name="mobile" placeholder="Mobile No"/>
+        </div>
+        
+            <div class="col-md-6">
+            <input type="checkbox" id="myCheck"  name="vehicle2" value="Bike">
+            <label for="myCheck" style="font-size: 13px;white-space:nowrap;">
+    
+          Have a promocode?</label>
+         </div>
+       
+               <div class="col-md-6 mt-2">
+                <input class="form-styling" type="text" name="code" id="udd" placeholder="Enter Code"/  style="width:122px!important;margin-left:40px;margin-top:-5px;">
+     </div>
+     
+     
+     <div class="col-md-12">
+             <input type="checkbox" id="vehicle3" name="vehicle3" value="Bike">
+            <label for="vehicle3" style="font-size: 13px;">
+    
+          I accept to the terms and conditionsand Privacy Policy.</label>
+    
+       </div>
+         
+       
+            <a  class="btn-signup text-white">Sign Up</a>
+        
+            </div>
+      
+                  </form>
+        
+
+        
+     
+  
+      
+
+  <div id="close"><a class="text-white" href="">X</a></div>
+  
+  </div></div>
+  </div>
+  </div>  
+
+
+
+
+
+
+  
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+  
+
+      <!-- jQuery library -->
+      <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="bootstrap/js/wow.js"></script>
+
+<script>
+new WOW().init();
+</script>
+
+<script>
+  var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+</script>
+
+
+
+ 
+
+
+
+
+<script>
+  function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    
+    } else {
+      text.style.display = "none";
+    }
+  }
+      </script>
+  
+  
+  <script>
+  $(function() {
+    $(".btn").click(function() {
+      $(".form-signin").toggleClass("form-signin-left");
+      $(".form-signup").toggleClass("form-signup-left");
+      $(".frame").toggleClass("frame-long");
+      $(".signup-inactive").toggleClass("signup-active");
+      $(".signin-active").toggleClass("signin-inactive");
+      $(".forgot").toggleClass("forgot-left");   
+      $(this).removeClass("idle").addClass("active");
+    });
+  });
+  
+
+
+  </script>
+
+
+  <script>
+    function openForm(event) {
+		document.getElementById("myForm").style.display = "block";
+		if(event.getAttribute("data-btn") == 'login')
+		{
+			if(document.querySelector(`.signin-active`).classList.contains('signin-inactive'))document.querySelector(`a[data-li="login"]`).click();
+			return;
+		}
+		if(!document.querySelector(`.signup-inactive`).classList.contains('signin-active'))document.querySelector(`a[data-li="signup"]`).click();
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#close").click(function(){
+          $(".frame,#close").hide();
+          
+        });
+  
+        $(".my-btn ").click(function(){
+          $(".frame,#close").show();
+          
+        });
+        
+      });
+    </script>   
+ 
+
+	<script>
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("udd");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	
+  } else {
+    text.style.display = "none";
+  }
+}
+		</script>
+		
+		<script>
+		$(document).ready(function(){
+  $("#myCheck").click(function(){
+    $("#udd").show();
+	
+  });
+  
+
+  
+});
+</script>
+
+
+
+
+
+  <script>
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+const param = getParameterByName('open') || '';
+if(param === 'video') document.querySelector(`button[data-button="video"]`).click();
+
+
+
+</script>
+
+
+
+
+<script>
+var linkClicked = document.getElementsByClassName('nav-link');
+var numClass = linkClicked.length;
+
+for (var i = 0; i < numClass; i++) {
+		linkClicked[i].addEventListener('click', function(){
+      var onTheMoment = document.getElementsByClassName('active');
+			onTheMoment[0].className = onTheMoment[0].className.replace(' active', '');
+			this.className += ' active';
+    }, false);
+	}
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj2").click(function(){
+    $(".ss2").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj3").click(function(){
+    $(".ss3").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj4").click(function(){
+    $(".ss4").slideToggle();
+  });
+});
+
+
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj5").click(function(){
+    $(".ss5").slideToggle();
+  });
+});
+
+
+</script>
+</body>
+</html>

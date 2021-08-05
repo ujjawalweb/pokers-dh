@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+<link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/animate.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<style type="text/css" media="screen">
+    header {
+        position: absolute;
+        background-color: #fff0;
+    }
+
+	.cn_bold2 {
+  font-size: 20px;
+  color: #000!important;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 0 0 20px 0;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}.flex-container>div {
+  width: 50%;
+  text-align: center;
+  line-height: 35px!important;
+  font-size: 30px;
+}.flex-image {
+  display: flex;
+  flex-wrap: wrap;
+}.flex-image>div {
+  width: 20%;
+}.content_wrapperh img {
+  max-width: 100%;
+}.content_wrp li {
+  font-size: 16px;
+  color: #000 !important;
+  padding: 0 0 0 0 !important;
+  margin: 10px 0;
+  list-style-type: disc;
+}
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 500px;
+        padding-top: 17px;
+    }
+
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        .shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+    /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+		.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+    /* ----------- iPhone X ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        .center {
+            display: block;
+            margin-left: auto;
+            width: 100%;
+            margin-right: auto;
+        }
+		.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+        .flex-image>div {
+            /* background-color: #f1f1f1; */
+            width: 33%;
+            padding: 2px;
+            /* margin: 10px; */
+        }
+
+        .different {
+            margin-bottom: 65px;
+        }
+    }
+
+.about-us__card-wrapper {
+    display: grid;
+    grid-template-columns: auto 50%;
+    grid-template-rows: none;
+    grid-gap: 16px;
+    margin-bottom: 32px;
+}
+.about-us__card {
+    padding: 16px;
+    background-color: #085426;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+}
+@media (max-width: 767.98px){
+.about-us__card-wrapper {
+    grid-template-columns: 100%;
+}
+.shadow-box
+		{
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+}
+	body{
+		/* background: #0b122e; */
+	}.cn_regular {
+    font-size: 16px !important;
+    color: #000!important;
+    font-family: 'Rajdhani', sans-serif !important;
+    padding: 0 0 20px 0;
+}
+</style>
+</head>
+<body>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <div class="container cc">
+    <a class="navbar-brand" href="index.html"><img src="images/dhamaal_poker.png" width="100"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+     <li><button class="my-btn d-none"> &nbsp;<i class=" fa fa-apple"></i> &nbsp;|  &nbsp;<i class="fa fa-windows"></i>  &nbsp;Get Desktop App</button></li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="howtoplay.html">How to Play</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj3 two" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Promotions
+
+          </a>
+          <!-- <div class="dropdown-menu ss3" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ujj4 three" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Download
+
+          </a>
+         <!--  <div class="dropdown-menu ss4" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">One</a>
+            <a class="dropdown-item" href="#">Two</a>
+            <a class="dropdown-item" href="#">Three</a>
+          </div> -->
+        </li>
+
+
+
+
+
+ 
+      </ul>
+    </div>
+    </div>
+  
+  </nav> 
+
+
+  <!--banner-->
+
+
+  <section class="how-to-play-section text-justify">
+    <div class="container ">
+        <div class="site-heading">
+            <h2 style="font-size: revert;padding-top: 50px;text-align: center;text-transform: uppercase;
+padding-bottom: 21px;"><span class="span_heading">TERMS OF USE</span></h2>
+
+        </div>
+        <!-- <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyEEhYLozEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+        <div class="row shadow-box">
+            <div class="col-md-12">
+                <div class="content_wrapperh">
+                    <p  style="padding-bottom:0px; margin-bottom:0px; margin-top:0px;">
+                        Your use of product and/or services (hereinafter this referred to as “Services”) offered by PokerDhamaal and/or its partners, subsidiaries, affiliates, and associates (hereinafter referred to as “PokerDhamaal ” or “We” or “Us” or “Our”) through the website www.PokerDhamaal.com (hereinafter referred to as “Website”) is subject to the following terms of service (hereinafter referred to as “Terms”)  
+                    </p>
+                    <br>
+                    <p>Any/every user is required to read all the terms carefully before using our services. All the terms are binding on all the users, who can avail of our services only when they comply with the terms. Users are also required or considered to be fully aware of all the updated or modified, or published terms. In an event where one or more of our terms are determined to be invalid, unlawful for any reason by a judicial or quasi-judicial body in India, the validity or enforceability of our remaining terms will not be affected as they will stay valid and binding on all users.
+                    </p>
+                    <p>Any user who doesn’t accept our terms of services can or should stop using any feature of our website.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Applicability:</p>
+                    <p>BEFORE REGISTERING WITH US, YOU SHOULD CAREFULLY READ AND REVIEW THE TERMS PROVIDED ON THE PokerDHAMAAL SITE, WHICH ARE APPLICABLE TO ALL SERVICES ON THE WEBSITE, AND ALSO THE PRODUCT-SPECIFIC CONDITIONS AND RULES APPLICABLE TO SPECIFIC OFFERINGS.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Eligibility:</p>
+                    <p>A person who is 18 or more years of age is eligible to use our services. However, if a person violates age restrictions, it’s his/her sole responsibility to bear the legal actions that might follow.
+                    </p>
+                    <p>The user is required to understand that our services are available only in India. We don’t offer our services in Assam, Odisha, Telangana, Sikkim, Andhra Pradesh, Tamil Nadu, and Nagaland in India. We have the right to control the access to our services at all times, in all States in India. These terms of use shall be suitably modified to reflect changes in law/regulation/rule in any of the states in India, and the User shall be notified of the same in the event of such change.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Game of Skill:</p>
+                    <p>It is legal to play Poker in India as it falls under the ‘game of skill’ category, which means the game's outcome depends on skills and not luck.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Game Services:</p>
+                    <p>All tournaments, promotional games, practice games, and cash games organized on the Website are collectively referred to as “Games.” The rules applicable to each type of game are provided on the Website.</p>
+                    <p>
+                        “Cash Game(s)” are games requiring the participant to have a certain minimum cash balance in their user account to participate. All other Games offered on the Website are defined as Non-Cash Game(s).
+                    </p>
+                    <p>
+                      PokerDhamaal charges service charges for Cash Games, which may vary depending on the nature of the Cash Game and are subject to change from time to time. Non-Cash Games are offered free on the Website but may be subject to entry restrictions in some cases. Service charges charged by PokerDhamaal are inclusive of all applicable taxes, including Goods & Services Tax.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">User Representations:</p>
+                    <p>
+                        Any information provided by you to us, whether at the stage of registration or during any time subsequently, should be complete and truthful.
+                    </p>
+                    <p>
+                        Before adding cash to your user account or participating in Cash Games, you shall be responsible for satisfying yourself about the legality of playing Cash Games in the jurisdiction from where you are accessing Cash Games. For example, suppose you are not legally competent to individually enter into Indian Rupee transactions through banking channels in India and/or are not accessing the Website from a permitted jurisdiction. In that case, you are prohibited from participating in Cash Games on the website. In the event of such violation, your participation in Cash Games will be deemed to be in breach of the Terms, and you will not be entitled to receive any prize that you might win in such Cash Games.
+                    </p>
+                    <p>
+                        You represent that you are 18 years of age or older to participate in any Cash Games and otherwise competent to enter into transactions with other users and PokerDhamaal. You are aware that participation in the Games organized by us (“Activity”) may result in financial loss to you. With full knowledge of the facts and circumstances surrounding this Activity, you are voluntarily participating in the Activity and assume all responsibility for and risk resulting from your participation, including all risks of financial loss. You agree to indemnify and hold PokerDhamaal, its employees, directors, officers, and agents were harmless concerning any claims and costs associated with your participation in the Activity.
+                    </p>
+                    <p>
+                        You represent that you have the experience and the requisite skills required to participate in the Activity. You are not aware of any physical or mental condition that would fully impair your capability to participate in the activity. You further acknowledge that you are solely responsible for any consequence resulting from participating in this Activity or being associated with this Activity or around this Activity. You understand that PokerDhamaal assumes no liability or responsibility for any financial loss that you may sustain due to participation in the Activity.
+                    </p>
+                    <p>
+                        You understand and accept that your participation in a Game available on the Website does not oblige us to give you a prize. Your winning a prize is entirely dependent on your skill as a player vis-a-vis other players in the Game and subject to the game's rules.
+                    </p>
+                    <p>
+                        You understand and agree that you are solely responsible for all content posted, transmitted, uploaded, or otherwise made available on the Website by you. All content posted by you must be legally owned by or licensed to you. By publishing any content on the Website, you agree to grant us a royalty-free, worldwide, non-exclusive, perpetual, and assignable right to use, copy, reproduce, modify, adapt, publish, edit, translate, create derivative works from, transmit, distribute, publicly display, and publicly perform your content and to use such content in any related marketing materials produced by us or our affiliates. Such content may include, without limitation, your name, username, location, messages, gender, or pictures. You also understand that you do not obtain any rights, legal or equitable, in any material incorporating your content. You further agree and acknowledge that PokerDhamaal has the right to use in any manner whatsoever all communication or feedback provided by you. You understand that the funds in your user account held by PokerDhamaal do not carry any interest or return.
+                    </p>
+                    <p>
+                        You shall not hold PokerDhamaal responsible for not playing any Game for which you may be eligible to participate. This includes, but is not limited to, situations where you cannot log in to your user account as your user account maybe pending validation, or you may be in suspected or established violation of any of the Terms.
+                    </p>
+                    <p>
+                        You understand and accept that by viewing or using the Website or availing of any Services, or using communication features on the Website, you may be exposed to content posted by other users which you may find offensive, objectionable or indecent. Accordingly, you may bring such content posted by other users to our notice that you may find offensive, objectionable or indecent, and we reserve the right to act upon it as we may deem fit. The decision taken by us in this regard shall be final and binding on you.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">User Account Creation and Operation:</p>
+                    <p>
+                        Any information provided by you to us, whether at the stage of registration or during any time subsequently, should be complete and truthful.
+                    </p>
+                    <p>
+                        To use our Services, you will need to register with us on the Website.
+                    </p>
+                    <p>
+                        By completing the online registration process on the Website, you confirm your acceptance of the Terms.
+                    </p>
+                    <p>
+                        By registering on PokerDhamaal, you agree to receive promotional messages relating to Tournaments & bonuses through SMS, Email, Call and Push Notifications. You may withdraw your consent by sending an email to support@PokerDhamaal.com.
+                    </p>
+                    <p>
+                        During the registration process, you will be required to choose a login name and a password in addition to providing some other information that may not be mandatory. Additionally, you may be required to give further personal information for your user account verification and/or add cash to your user account. You must give us the correct details in all fields requiring your personal information, including, without limitation, your name, postal address, email address, telephone number(s), etc. You undertake that you will update this information and keep it current.
+                    </p>
+                    <p>
+                        You acknowledge that we may, at any time, require you to verify the correctness of this information, and to do so may require additional documentary proof from you, failing which we reserve the right to suspend or terminate your registration on the Website.
+                    </p>
+                    <p>
+                        Any information provided by you to us should be complete and truthful to the best of your knowledge. We are not obliged to cross-check or verify information provided by you, and we will not take any responsibility for any outcome or consequence resulting from you providing incorrect information or concealing any relevant information from us.
+                    </p>
+                    <p>
+                        You understand that it is your responsibility to protect the information you provide on the Website, including but not limited to your Username, Password, Email address, Contact Details, and Mobile number. PokerDhamaal will not ask for your user account login password, which is only to be entered at the time of login. At no other time should you provide your user account information to any user logged in on the Website or elsewhere? You undertake that you will not allow / login and then allow any other person to play from your user account using your username. You specifically understand and agree that we will not incur any liability for information provided by you to anyone, resulting in your user account on the Website being exposed or misused by any other person.
+                    </p>
+                    <p>
+                        You agree to use your PokerDhamaal user account solely to play on the Website and for transactions that you may have to carry out in connection with availing the Services on the Website. Use or attempted use of your user account for any reason other than what is stated in the Terms may result in immediate termination of your user account and forfeiture of any prize, bonus, or balance in the user account.
+                    </p>
+                    <p>
+                        You also understand and agree that deposits in your user account maintained with us are purely for participation in Cash Games made available on the Website.
+                    </p>
+                    <p>
+                        You understand and agree that you cannot transfer any sum from your user account with us to the account of another registered user on the Website except as may be permitted by PokerDhamaal and subject to restrictions and conditions as may be prescribed.
+                    </p>
+                    <p>
+                        We are legally obliged to deduct tax at source (TDS) on winnings of more than Rs. 10,000/- in a single tournament, a single Pool Poker game, or a single Points Poker game, as the case may be. In these cases, you will be required to furnish your Permanent Account Number (PAN) duly issued to you by the Income Tax authorities if you have not already done so. TDS at the rate of 30% will automatically be deducted from such winnings, and the rest will be credited to your PokerDhamaal user account. Withdrawal of these winnings will only be permitted upon your providing your correct PAN details. These limits and rates are subject to change as per the prevailing rules and regulations. PokerDhamaal’s obligation in this regard is limited to deducting TDS as required by law and providing you an appropriate certificate of tax deduction. We neither advise you nor shall in any manner be responsible for your tax matters.
+                    </p>
+                    <p>
+                        We reserve the right to verify your PAN from time to time and to cancel any prize should your PAN be found inconsistent in our verification process.
+                    </p>
+                    <p>
+                        Once you have completed the registration process, it would mean that you have accepted our terms and that they will be binding on you across all our services. Read the Privacy policy for more information.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">User account validation and personal information verification:</p>
+                    <p>
+                        
+                      PokerDhamaal may, from time to time, attempt to validate its players’ user accounts. These attempts may be made via a phone call or via email. If we cannot get in touch with you the first time around, we will make additional attempts to establish contact with you. Suppose the phone number and email provided by you is not correct. In that case, we bear no responsibility for the Services being interrupted due to our inability to establish contact with you.
+                    </p>
+                    <p>
+                        If we cannot reach you or if the validation is unsuccessful, we reserve the right to disallow you from logging into the Website or reduce your play limits and/or Add Cash limits until we can satisfactorily validate your user account. We will, in such events, email you to notify you of the next steps regarding user account validation. We may also ask you for proof of identification and proof of address from time to time.
+                    </p>
+                    <p>
+                        Upon receipt of suitable documents, we will try our best to enable your user account at the earliest. However, it may take a few business days to reinstate your user account.
+                    </p>
+                    <p>
+                        Suppose we have made several attempts to reach out to you but have been unable to do so. In that case, we also reserve the right to permanently suspend your user account and refund the amount, if any, in your user account to the financial instrument through which the payment was made to your user account or by cheque to the address provided by you. Furthermore, in the event the address provided by you is incorrect, PokerDhamaal will not make any additional attempts for delivery of the cheque unless a correct address is provided by you and charges for redelivery as prescribed by PokerDhamaal are paid by you.
+                    </p>
+                    <p>
+                        The Privacy Policy of our Website forms a part of the Terms. Accordingly, all personal information that is of such nature that requires protection from unauthorized dissemination shall be dealt with in the manner provided in the website's Privacy Policy.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">User Restrictions:</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Anti-Cheating and Anti-Collusion:
+                    </p>
+                    <p>You undertake that you will play in all Games in which you have registered/joined and not use any form of external assistance to play. You shall not add unauthorized components, create or use cheats, exploits, bots, hacks, or any other third-party software designed to modify the Website or use any third-party software that intercepts, mines, or otherwise collects information from or through the Website or any Services. Any attempt to employ any such external assistance is strictly prohibited. Formation of teams and collaboration between you and any other user(s) for participating in Games organized on the Website or any other form of cheating is strictly prohibited.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Money Laundering:
+                    </p>
+                    <p>
+                        You are prohibited from doing any activity on the Website that may be construed as money laundering, including, without limitation, attempting to withdraw cash from unutilized cash added through credit cards or deliberately losing money to a certain player(s).
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Anti-Spamming:
+                    </p>
+                    <p>
+                        Sending SPAM emails or any other form of unsolicited communication for obtaining registrations on the Website to benefit from any promotional program of PokerDhamaal or any other purpose is strictly prohibited
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Multiple IDs:
+                    </p>
+                    <p>
+                        Your registration on the Website is restricted to a single user account used by you to avail of the Services provided on the Website. You are prohibited from creating or using multiple user IDs for registering on the Website.
+                    </p>
+                    <p>
+                        You may not create a login name or password or upload, distribute, transmit, publish or post content through or on the Website or through any service or facility, including any messaging facility provided by the Website which :
+                    </p>
+                    <ol>
+                        <li>is libelous, defamatory, obscene, intimidating, invasive of privacy, abusive, illegal, harassing.</li>
+                        <li>contains expressions of hatred, hurting religious sentiments, racial discrimination or pornography.</li>
+                        <li>is otherwise objectionable or undesirable (whether or not unlawful).</li>
+                        <li>would constitute an incitement to commit a criminal offense.</li>
+                        <li>violates the rights of any person.</li>
+                        <li>is aimed at soliciting donations or other forms of help.</li>
+                        <li>violates the intellectual property of any person.</li>
+                        <li>disparage in any manner PokerDhamaal or any of its subsidiaries, affiliates, licensors, associates, partners, sponsors, products, services, or websites.</li>
+                        <li>promotes a competing service or product or</li>
+                        <li>violates any laws.</li>
+                    </ol>
+                    <p>
+                        In the event we determine that the login name created by you is indecent, objectionable, offensive, or otherwise undesirable, we shall notify you of the same, and you shall promptly provide us with an alternate login name so that we can change your existing login name to the new name provided by you. Suppose you fail to provide an alternate name. In that case, we reserve the right to either permanently suspend your user account or restore your user account only after you have provided a different acceptable login name.
+                    </p>
+                    <p>
+                        You shall not host, intercept, emulate or redirect proprietary communication protocols used by the Website, if any, regardless of the method used, including protocol emulation, reverse engineering, or modification of the Website or any files that are part of the Website.
+                    </p>
+                    <p>
+                        You shall not frame the Website. You may not impose editorial comments, commercial material, or any information on the Website, alter or modify Content on the Website, or remove, obliterate or obstruct any proprietary notices or labels.
+                    </p>
+                    <p>
+                        You shall not use services on the website for commercial purposes, including but not limited to use in a cyber cafe as a computer gaming center, network play over the Internet or through gaming networks, or connection to an unauthorized server that copies the gaming experience on the Website.
+                    </p>
+                    <p>
+                        You shall not upload, distribute or publish through the Website any content which may contain viruses or computer contaminants (as defined in the Information Technology Act 2000 or such other laws in force in India at the relevant time) which may interrupt, destroy, limit the functionality or disrupt any software, hardware or other equipment belonging to us or that aids in providing the services offered by PokerDhamaal. You shall not disseminate or upload viruses, programs, or software whether it is harmful to the Website or not. Additionally, you shall not impersonate another person or user, attempt to get a password, other user account information, or other private information from a user, or harvest email addresses or other information.
+                    </p>
+                    <p>
+                        You shall not purchase, sell, trade, rent, lease, license, grant a security interest in, or transfer your user account, Content, currency, points, standings, rankings, ratings, or any other attributes appearing in, originating from, or associated with the Website.
+                    </p>
+                    <p>
+                        Any form of fraudulent activity, including attempting to use or using any other person’s credit card(s), debit cards, net-banking usernames, passwords, authorization codes, prepaid cash cards, mobile phones for adding cash your user account, is strictly prohibited.
+                    </p>
+                    <p>
+                        Accessing or attempting to access the Services through someone else’s user account is strictly prohibited.
+                    </p>
+                    <p>
+                        Winnings, bonuses, and prizes are unique to the player and are non-transferable. If you attempt to transfer any winnings, bonuses, or prizes, these will be forfeited.
+                    </p>
+                    <p>
+                        Suppose you are an officer, director, employee, consultant, or agent of PokerDhamaal or a relative of such persons (“Associated Person”). In that case, you are not permitted to play either directly or indirectly any Games which entitle you to any prize on the Website, other than in the course of your engagement with PokerDhamaal. For these purposes, the term ‘relative’ shall include spouse and financially dependent parents and children.
+                    </p>
+                    <p>
+                        You shall not post any material or comment on any media available for public access, which in our sole discretion, is defamatory or detrimental to our business interests, even though such media is not owned or controlled by us. In addition to any other action that we may take under the provision hereof, we reserve the right to remove any material or comments posted by you and restrict your access to any media available for public access that is either controlled or moderated by us; when in our sole opinion, any such material or comments posted by you is defamatory or detrimental to our business interests.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Transactions & Payments:
+                    </p>
+                    <p>
+                        All transactions on the Website shall be in Indian Rupees.
+                    </p>
+                    <p>
+                        Once you register on our Website, we maintain a user account to keep a record of all your transactions with us. Payments connected with participation in Cash Games have to be made through your PokerDhamaal user account. In addition, all cash prizes won by you are credited by us into this user account.
+                    </p>
+                    <p>
+                        When making a payment, please ensure that the instrument used to make the payment is your own and is used to Add Cash into your user account only.
+                    </p>
+                    <p>
+                        Subject to the Add Cash limits specified by us from time to time, you are free to deposit as much money as you want in your user account to participate in Cash Games on the Website.
+                    </p>
+                    <p>PokerDhamaal wants you to play responsibly on the Website. The ability to Add Cash in your user account shall be subject to monthly Add Cash limits, which we can be set with undertakings, indemnity, waiver, and verification conditions as we deem appropriate at our sole discretion.</p>
+                    <p>
+                        Credit cards, Debit cards, prepaid cash cards, and internet banking payments are processed through third-party payment gateways. Similarly, other payment modes also require authorization by the intermediary, which processes payments. We are not responsible for delays or denials at their end. The processing of payments will be solely in terms of their policies and procedures without any responsibility or risk at our end. If there are any issues connected with adding cash, a complaint may be sent to us following the complaints procedure provided in the “Complaints and disputes” section below. You agree that in such an event of your credit being delayed or eventually declined for reasons beyond our control, we will not be held liable in any manner whatsoever. Once a payment/transaction is authorized, the funds are credited to your user account and are available for you to play Cash Games. We have the right to cancel a transaction at any point in time solely according to our discretion. If the payment is successful, the transaction will be reversed and the money credited back to your payment instrument.
+                    </p>
+                    <p>
+                        Player funds are held in trust by us in specified bank accounts. PokerDhamaal keeps all players’ funds unencumbered, remitted to you in due course subject to the terms and conditions applicable to withdrawal of funds. Funds held in your user account are held separately from our corporate funds. Even in the highly unlikely event of an insolvency proceeding, your claims on the deposits will be given preference over all other claims to the extent permissible by law.
+                    </p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Withdrawals:
+                    </p>
+                    <p>You may withdraw your winnings through an electronic bank to bank transfer for the number of winnings.</p>
+                    <p>You agree that the following conditions govern all withdrawals you make:</p>
+                    <p>PokerDhamaal can ask you for KYC documents to verify your address and identity at any stage.</p>
+                    <p>Withdrawals will be permitted only from accounts for which such KYC process is complete</p>
+                    <p>You can choose to withdraw money from your user account at any time, subject to bonus/prize money withdrawal restrictions, by notifying us of your withdrawal request. Bonuses and promotional winnings are subject to withdrawal restrictions and can only be withdrawn when you have made at least one cash deposit on www.PokerDhamaal.com and after that played at least one Cash Game.</p>
+                    <p>Once notified, post verification of the withdrawal request, we may disburse the specified amount electronically. We also reserve the right to disburse the amount on the financial instrument used to Add Cash to your user account.</p>
+                    <p>Withdrawals do not attract processing charges as per the prevalent policy.</p>
+                    <p>We will attempt our best to process your withdrawals on time, but there could be delays due to the time required for verification and completing the withdrawal transaction. We shall not be liable to pay you any form of compensation for the reason of delays in remitting payments to you from your user account.</p>
+                    <p>To be eligible to win a prize/bonus, you must be a resident of India and accessing the Services of PokerDhamaal on the Website from India.</p>
+                    <p>Suppose you are a prize winner resident in India and physically present in India while accessing the services of PokerDhamaal but not an Indian citizen. In that case, we will remit your winnings in Indian Rupees to the bank account given by you, provided the bank account is within India.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Service Connectivity Issues:
+                    </p>
+                    <p>You are aware that any internet connectivity issues, disruptions due to your local internet environment, setup of software or hardware on your end are not controlled/corrected by PokerDhamaal. Hence, the website will not be liable for any halts, breaks, or interruptions in your usage of our services.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">User Account Suspension and Voluntary Termination:
+                    </p>
+                    <p>We reserve the right to suspend or terminate your account with us if we find you violating the terms of our website or breaching the security of our website. You understand that our decision to suspend or terminate your services is binding on you and is at our sole discretion.</p>
+                    <p>If you need, you can opt-out of using our services at any point in time by contacting us @ support@PokerDhamaal.com. In such an event, your withdrawable cash balance analyzed, following our verification, will be transferred to you via cheque or online transfer.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Breach and Consequences:
+                    </p>
+                    <p>If we find any user breaching our security and privacy protocols, following an internal investigation, we may decide to undertake a range of actions, depending upon the severity of the detected breach. We reserve the sole right to act and take one or more of the following actions:</p>
+                    <ol style="display:grid;">
+						<li style="list-style-type: disc;color: #2d2a2a;text-transform:inherit;font-size: 17px;font-weight: 400;">We can stop the services indefinitely on a user’s account.</li>
+                         <li style="list-style-type: disc;color: #2d2a2a;text-transform:inherit;font-size: 17px;font-weight: 400;">We can permanently terminate a user’s account on our website.</li>
+                         <li style="list-style-type: disc;color: #2d2a2a;text-transform:inherit;font-size: 17px;font-weight: 400;">We can collapse the withdrawable cash in your account.</li>
+                         <li style="list-style-type: disc;color: #2d2a2a;text-transform:inherit;font-size: 17px;font-weight: 400;">We can demand compensation for the damages that occurred because of a breach and even prosecute a user for offensive violations, violations contrary to prevailing law if need be.</li>
+                         <li style="list-style-type: disc;color: #2d2a2a;text-transform:inherit;font-size: 17px;font-weight: 400;">We can bar you from registering on our website in the future.</li>
+					</ol>
+                    <p style="color: #46474f;
+					font-weight: 600;">Complaints and Disputes:
+                    </p>
+                    <p>A user with a complaint can approach our customer care team for resolution by writing to support@PokerDhamaal.com. The user with a complaint must understand that all complaints and disputes at PokerDhamaal are to be kept confidential. We will act to resolve complaints in standard time. Any decision taken by PokerDhamaal, following a complaint will be binding on the user. Any dispute, controversy, or hold against the company shall be subject to the exclusive jurisdiction of the civil courts at Bangalore only.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Content & promotions:
+                    </p>
+                    <p>All content and material on the Website, including but not limited to information, images, marks, logos, designs, pictures, graphics, text content, hyperlinks, multimedia clips, animation, games, and software (collectively referred to as “Content”), whether or not belonging to PokerDhamaal, are protected by applicable intellectual property laws. Additionally, all chat content, messages, images, recommendations, emails, images sent by any user can be logged/recorded. It shall form part of Content, and PokerDhamaal is free to use this material in any manner whatsoever. However, in no manner detrimental to the interest of the user.</p>
+                    <p>*PokerDhamaal’s Claim of ‘India’s Most Trusted Poker Site’ Is completely based on its Users Reviews and acceptances & self-assessments. The documents proving the same can be produced only in case of demand by an appropriate authority.</p>
+                    <p>The details of various promotions/clubs /tournaments organized on the Website can be found on the Website. Eligibility and applicable conditions for the ongoing promotional programs are provided on the website, forming a part of the Terms. Further PokerDhamaal reserves the right to cancel or modify the same without prior notice.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Games Rules:
+                    </p>
+                    <p>You agree to abide by the rules and regulations of each of the Games. Therefore, you should ensure that you have read and understood the rules and regulations of the Games. These Game Rules form part of the Agreement and can be found on the ‘Game rules/how to play page of the Site. We may, from time to time, make additional Games available as part of the Services. This Agreement will apply to any Game Rules relating to such Games. We will let you know about and allow you to read such Game Rules when introducing additional Games to the Site. We reserve the right to determine the results and winners of each of the Games following the Game Rules. By registering and/or participating in any Game or tournament, you agree to these determinations and shall not be open to challenge. We will post lists of winners on the Site following each Game/tournament.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Disclaimer & indemnity & Limitation of liability :
+                    </p>
+                    <p>The Company “PokerDhamaal” shall not be liable for any claim, loss, injury, or damages (direct, indirect, incidental, or any other kind whatsoever) arising from or in connection with your use of the Services, the Site, or the platform. Notwithstanding anything to the contrary contained in the Agreement, you agree that our maximum aggregate liability for all your claims against us, in all circumstances other than for valid Redemption of any Cash Balance in your Accounts, shall be limited to Rs. 2,000/- only.</p>
+                    <p>Before adding cash to your user account or participating in Cash Games, you shall be responsible for satisfying yourself about the legality of playing Cash Games in the jurisdiction from where you are accessing Cash Games. For example, suppose you are not legally competent to individually enter into Indian Rupee transactions through banking channels in India and/or are not accessing the Website from a permitted jurisdiction. In that case, you are prohibited from participating in Cash Games on the website. In the event of such violation, your participation in Cash Games will be deemed to be in breach of the Terms, and you will not be entitled to receive any prize that you might win in such Cash Games.</p>
+                    <p>You represent that you have the experience and the requisite skills required to participate in the Activity. You are not aware of any physical or mental condition that would fully impair your capability to participate in the activity. You further acknowledge that you are solely responsible for any consequence resulting from participating in this Activity or being associated with this Activity or around this Activity. You understand that PokerDhamaal assumes no liability or responsibility for any financial loss that you may sustain due to participation in the Activity.</p>
+                    <p>You understand that the funds in your user account held by PokerDhamaal do not carry any interest or return.</p>
+                    <p>You shall not hold PokerDhamaal responsible for not playing any Game for which you may be eligible to participate. This includes, but is not limited to, situations where you cannot log in to your user account as your user account maybe pending validation, or you may be in suspected or established violation of any of the Terms.</p>
+                    <p>You agree to indemnify and hold harmless the Company against any claims, actions, suits, damages, penalties, or awards brought against us by any entity or individual in connection with or in respect of your use of the Services, the Site, or the Software.</p>
+                    <p>The Company expressly disclaims all responsibility and liability for any harm resulting from your participation in, or cancellation of, any Game, any activity or transactions with third parties whom you may have connected to through the Services, the Site or the Software, and any User-generated Content, including any violation of intellectual property rights concerning such User-generated Content.</p>
+                    <p>Intellectual Property All rights, tangible and intangible, including copyright and other intellectual property rights, about the Services, the Site, and the platform. Any content or information displayed or contained therein belongs exclusively to the Company unless expressly provided otherwise. The Company is merely permitting the User to play Games online and not use the same for any other commercial gain, and no right of any nature whatsoever is being passed on to the user by permitting him/her to play the Game. Using the Services, the Site, and the platform does not, expressly or impliedly, give you ownership of any intellectual property rights in the Services, Site, or Software or the content or information you access. The company holds the rights over any content generated by Users, including but not limited to the contents of chat messages or message boards/forums, and you acknowledge that the Company is not responsible for such User-generated Content. You understand that you will be accessing such User-generated Content at your own risk and will not hold the Company responsible for an obscene, defamatory, illegal, or otherwise offensive User-generated Content that may be displayed or accessible.</p>
+                    <p>The Company reserves the right to change, amend, add and modify these Terms of Service at any time and without notice to the Users. The Users shall be responsible for regularly reviewing these Terms of Service to obtain timely notice of such changes. After changes are posted, users’ continued use of the Website is posted their acceptance of the amended Terms of Service.</p>
+                    <p>The failure of either Party to insist upon strict performance of any of the terms or provisions herein or to exercise the option, right, or remedy herein contained shall not in future be construed as a waiver or relinquishment of such terms, provisions, option, right, or remedy but the same shall continue and remain in full force and effect. No waiver by either party of any term or provision hereof shall be deemed to have been made unless expressed in writing and signed by such party.</p>
+                    <p>These Terms of Use (and the Privacy Policy of the Website along with any other terms and conditions specified by the Company, such as those sent via email, etc.) contain all the terms agreed between the Parties regarding the PokerDhamaal Website and their use and supersedes and excludes any prior terms and conditions between the Parties.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Voluntary Termination:
+                    </p>
+                    <p>You are free to discontinue use of the Services on the Website at any time by intimating us of your desire to do so by sending an email to us at support@PokerDhamaal.com. If there is a positive withdrawable cash balance in your user account at such time, we will, subject to satisfactory verification, disburse the same to you by online transfer or by cheque on time.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Account Maintenance charges and closure of inactive accounts:
+                    </p>
+                    <p>Y werification, disburse the same to you by online transfer or by cheque on time.An account of a customer is considered inactive if a time of 12 months has elapsed from the time of the last login into our gaming system.</p>
+                    <p>Monthly maintenance of Rs. 250 /- will be charged to an inactive account.</p>
+                    <p>If the account balance of a customer remains negative on the application of maintenance fees for more than 15 days, the customer's account shall be closed permanently.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Mobile Number Verification
+                    </p>
+                    <p>At PokerDhamaal, you are required to validate your Mobile number for playing Cash games. This is to safeguard fraud of any form at PokerDhamaal. All your information is kept confidential & not shared with any person or Party for a given reason. It is a mandatory process for all cash users to follow the process of mobile authentication at PokerDhamaal.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Add Cash:</p>
+                    <p>At PokerDhamaal, you can deposit up to Rs 50,000 in a single transaction.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">How does Bonus work?</p>
+                    <p>When you add cash or deposit to your PokerDhamaal account, you are allotted a certain bonus depending on the ongoing promotion/offer. A part of the bonus is released after every cash game you play until the whole bonus has been credited to your account. Remember that the Bonus must be earned (disbursed) within the stipulated claim period, which may differ based on the offer.</p>
+                    <p>For example – If you have Rs.100 bonus and you play a deals Poker game of Rs. 200, 10% of Rs.200, i.e., Rs.20 bonus, would be credited to your withdrawal balance once the game is completed. If you play the next game of Rs.500, then 10% of Rs.500, i.e., Rs.50 bonus, would be credited to your withdrawal balance. It will continue till the whole bonus amount is released. The release percentage/rate may vary depending on the offer.</p>
+                    <p>Please Note: One player can have only one account on PokerDhamaal. If multiple accounts are detected, the entire bonus amount on all accounts will be canceled. The Terms of Service apply to all services offered on PokerDhamaal. Any violation of the Terms at any stage may result in disqualification from receiving the bonus.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Governing Law, dispute resolution & jurisdiction:</p>
+                    <p>The Terms and Privacy Policy shall be interpreted under the laws of India.</p>
+                    <p>Any dispute, controversy, or claim arising out of the Terms or Privacy Policy shall be subject to the exclusive jurisdiction of the civil courts at Bangalore.</p>
+                    <p style="color: #46474f;
+					font-weight: 600;">Certified Random Number Generator (RNG)</p>
+                    <p>Our random number generator (RNG) has been verified by iTech Labs, a globally competent authority (ISO 17025 certified) for RNG verification and provides RNG certifications to gaming companies globally. The RNG uses an algorithm to generate random numbers, ensuring that all players get cards selected randomly from a well-shuffled deck and are dealt fairly by the system without any bias. The shuffling tests were conducted on large enough samples to give the calculations sufficient. As a result, iTech Labs has found that the card sequences are unpredictable, non-repeatable, and uniformly distributed.
+                    </p>
+
+
+
+
+			</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="">
+    <div class="container">
+        <div class="about-us__card-wrapper" style="">
+            
+        </div>
+    </div>
+</section>
+<!-- <div class="container-fluid">
+<div class="container">
+<div class="row mt-5">
+<div class="col-md-12"><h2 class="text-center">How To Play Poker</h2></div>
+</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+<div class="container-fluid bgss p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="images/dhamaal_poker.png" width="140" class="logg"></div>
+
+      <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+   <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="responsible.html">Responsible Play</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="termsofuse.html">Terms of Use</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  
+  <!-- <li style="display: flex;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="faq.html">FAQ</a></li>&nbsp; &nbsp;
+  <li style="display: flex;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li> -->
+</ul>
+
+      </div>
+      <div class="col-md-3">
+<ul class="foot-text" style="display: grid;">
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="refundpolicy.html">Refund Policy</a></li>&nbsp; &nbsp;
+  <li style="display: flex;margin-bottom: -11px;"><a style="color: white;" href="privacy.html">Privacy Policy</a></li>&nbsp;&nbsp;
+  <li style="display: flex;margin-bottom: -19px;"><a style="color: white;" href="aboutus.html">About us</a></li>&nbsp; &nbsp;
+</ul>
+
+      </div>
+        
+        
+              <div class="col-md-6 mt-3"><i class="fa fa-android"></i> &nbsp;&nbsp;  <i class="fa fa-windows"></i>&nbsp;&nbsp;  <i class="fa fa-apple"></i>&nbsp;&nbsp;  <i class="fa fa-ios"></i></div>
+        
+              <div class="col-md-6 mt-3">
+                <div class="social-links">
+                  <a href="#"><i class="fa fa-google"></i></a> &nbsp;&nbsp; 
+                  <a href="https://www.facebook.com/Dhamaal-Games-100416855517758" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp; 
+                  <a href="https://www.instagram.com/dhamaalgames/" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp; 
+                  <a href="https://twitter.com/DhamaalGames" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+                </div>
+        
+              </div>
+        
+              <div class="col-md-12 mt-4">
+                <h5 class="text-white">Approved by Major Banks of India</h5>
+              </div>
+                <span class="ico">
+              <div class="col-md-1 mt-3"><img src="images/gp.png" class="ims" ></div>&nbsp;&nbsp;
+        
+        
+              <div class="col-md-1 mt-3"><img src="images/pay.png" class="ims"></div>&nbsp;&nbsp;
+              <div class="col-md-1 mt-3"><img src="images/pu.png"class="imn" ></div>&nbsp;&nbsp;&nbsp;
+        
+              <div class="col-md-1 mt-3"><img src="images/master.png" class="ims"></div>&nbsp;&nbsp;
+            </span>
+              <hr class="new">
+              <div class="row">
+        <div class="col-6 mt-4" style="display: flex;justify-content: space-around;">
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="contactus.html" style="color: white;">Contact Us</a></h5>
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Legality</a></h5>
+          <h5 class="text-white ujj" style="white-space: nowrap;font-size: 18px;"><a href="legality.html" style="color: white;">Withdrawal</a></h5>
+        </div>
+
+<div class="col-6 mt-4 my-c" style="position: relative;left:430px;"><h5 class="text-white"style="font-size:17px;">© 2021 Poker Dhamaal. All rights reserved.</h5></div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="form-popup" id="myForm">  
+  <div class="container">
+    <div class="frame wow fadeInDown" data-dismiss="modal">
+      <div class="nav">
+        <ul class="links">
+          <span class="signin-active text-white"><a class="btn  btt" data-li="login">Sign in</a></span>
+          <span class="signup-inactive text-white"><a class="btn btt" data-button="video" data-li="signup">Sign up </a></span>
+        </ul>
+      </div>
+      <div ng-app ng-init="checked = false">
+  
+                  <form class="form-signin" action="" method="post" name="form">
+           <h5 class="text-center play">LOGIN AND PLAY</h5>
+            <input class="form-styling" type="text" name="username" placeholder="Username"/>
+          
+            <input class="form-styling" type="password" name="password" placeholder="Password"/>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1" style="font-size: 13px;">
+    
+          Remember me</label>
+            <div class="btn-animate">
+              <a class="btn-signin">Login</a>
+        
+            </div>
+        
+    
+                  </form>
+          
+                
+                  <form class="form-signup" action="" method="post" name="form">
+            <h5 class="text-center play">	SIGNUP AND START WINNING</h5>
+              <div class="row">
+              <div class="col-md-12">
+           
+            <input class="form-styling" type="text" name="fullname" placeholder="Username"/>
+        </div><br>
+        
+        <div class="col-md-6">
+          
+            <input class="form-styling" type="Password" name="fullname" placeholder="Password"/><br>
+        </div>
+        
+        <div class="col-md-6">
+       
+            <input class="form-styling" type="password" name="fullname" placeholder="Confirm Password"/><br>
+        </div>
+            <div class="col-md-12">
+          
+            <input class="form-styling" type="text" name="mobile" placeholder="Mobile No"/>
+        </div>
+        
+            <div class="col-md-6">
+            <input type="checkbox" id="myCheck"  name="vehicle2" value="Bike">
+            <label for="myCheck" style="font-size: 13px;white-space:nowrap;">
+    
+          Have a promocode?</label>
+         </div>
+       
+               <div class="col-md-6 mt-2">
+                <input class="form-styling" type="text" name="code" id="udd" placeholder="Enter Code"/  style="width:122px!important;margin-left:40px;margin-top:-5px;">
+     </div>
+     
+     
+     <div class="col-md-12">
+             <input type="checkbox" id="vehicle3" name="vehicle3" value="Bike">
+            <label for="vehicle3" style="font-size: 13px;">
+    
+          I accept to the terms and conditionsand Privacy Policy.</label>
+    
+       </div>
+         
+       
+            <a  class="btn-signup text-white">Sign Up</a>
+        
+            </div>
+      
+                  </form>
+        
+
+        
+     
+  
+      
+
+  <div id="close"><a class="text-white" href="">X</a></div>
+  
+  </div></div>
+  </div>
+  </div>  
+
+
+
+
+
+
+  
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+  
+
+      <!-- jQuery library -->
+      <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="bootstrap/js/wow.js"></script>
+
+<script>
+new WOW().init();
+</script>
+
+<script>
+  var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+</script>
+
+
+
+ 
+
+
+
+
+<script>
+  function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    
+    } else {
+      text.style.display = "none";
+    }
+  }
+      </script>
+  
+  
+  <script>
+  $(function() {
+    $(".btn").click(function() {
+      $(".form-signin").toggleClass("form-signin-left");
+      $(".form-signup").toggleClass("form-signup-left");
+      $(".frame").toggleClass("frame-long");
+      $(".signup-inactive").toggleClass("signup-active");
+      $(".signin-active").toggleClass("signin-inactive");
+      $(".forgot").toggleClass("forgot-left");   
+      $(this).removeClass("idle").addClass("active");
+    });
+  });
+  
+
+
+  </script>
+
+
+  <script>
+    function openForm(event) {
+		document.getElementById("myForm").style.display = "block";
+		if(event.getAttribute("data-btn") == 'login')
+		{
+			if(document.querySelector(`.signin-active`).classList.contains('signin-inactive'))document.querySelector(`a[data-li="login"]`).click();
+			return;
+		}
+		if(!document.querySelector(`.signup-inactive`).classList.contains('signin-active'))document.querySelector(`a[data-li="signup"]`).click();
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#close").click(function(){
+          $(".frame,#close").hide();
+          
+        });
+  
+        $(".my-btn ").click(function(){
+          $(".frame,#close").show();
+          
+        });
+        
+      });
+    </script>   
+ 
+
+	<script>
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("udd");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	
+  } else {
+    text.style.display = "none";
+  }
+}
+		</script>
+		
+		<script>
+		$(document).ready(function(){
+  $("#myCheck").click(function(){
+    $("#udd").show();
+	
+  });
+  
+
+  
+});
+</script>
+
+
+
+
+
+  <script>
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+const param = getParameterByName('open') || '';
+if(param === 'video') document.querySelector(`button[data-button="video"]`).click();
+
+
+
+</script>
+
+
+
+
+<script>
+var linkClicked = document.getElementsByClassName('nav-link');
+var numClass = linkClicked.length;
+
+for (var i = 0; i < numClass; i++) {
+		linkClicked[i].addEventListener('click', function(){
+      var onTheMoment = document.getElementsByClassName('active');
+			onTheMoment[0].className = onTheMoment[0].className.replace(' active', '');
+			this.className += ' active';
+    }, false);
+	}
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj2").click(function(){
+    $(".ss2").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj3").click(function(){
+    $(".ss3").slideToggle();
+  });
+});
+
+
+</script>
+
+
+  <script>
+$(document).ready(function(){
+  $(".ujj4").click(function(){
+    $(".ss4").slideToggle();
+  });
+});
+
+
+</script>
+
+  <script>
+$(document).ready(function(){
+  $(".ujj5").click(function(){
+    $(".ss5").slideToggle();
+  });
+});
+
+
+</script>
+</body>
+</html>
